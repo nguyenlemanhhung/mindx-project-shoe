@@ -17,3 +17,12 @@ right.addEventListener('mouseenter', () => {
 right.addEventListener('mouseleave', () => {
   content.classList.remove('hoverRight');
 })
+
+//add directional arrows to the menu
+
+$(document).ready(function(){
+  $('.sub-menu').parent('li').addClass('has-child position-relative');
+});
+$(document).ready(function(){
+  $('.sub-menu').addClass('position-absolute');
+});

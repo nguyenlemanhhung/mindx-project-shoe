@@ -6,57 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/home-page.css">
+    <link rel="stylesheet" href="/stylesheets/web/home-page.css">
+    <link rel="stylesheet" href="/stylesheets/web/footer.css">
     <title>Home</title>
 </head>
 <body>
-    <!-- ===============NAVBAR=============== -->
-    <nav class="navbar">
-        <div class="menu collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    
+    <header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Men's Shoes</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sport Shoes</a></li>
+                                <li><a href="#">Sport Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Women's shoes</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sport Shoes</a></li>
+                                <li><a href="#">Sport Shoes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-        </div>
-
+                <li><a href="#">Home</a></li>
+                <li><a href="/view/web/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <div class="logo">
             <i class="fas fa-crown"></i>
             <span class="logo-text">mjstk</span>
         </div>
-
+    
         <div class="search">
             <i class="bi bi-search"></i>
         </div>
-
+    
         <div class="cart">
             <i class="bi bi-cart3"></i>
         </div>
-
+    
         <div class="profile-pic">
             <img src="/assets/images/profile-pic.jpeg" alt="Photo by Axel Eres on Unsplash">
         </div>
-    </nav>
-
-
+        
+    
+    </header>
     <!-- ===============MAIN SECTION=============== -->
    
     <div class="main">
@@ -102,8 +102,79 @@
             <i class="bi bi-arrow-right-circle"></i>
         </div>
     </div>
+    <section class="subscribe-area">
+        <div class="container">
+            <div class="subscribe">
+                <h4>get latest updates everyday</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem.</p>
+                <form action="#">
+                    <input type="text" placeholder="Your Email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer">
+                <div class="single-footer">
+                    <h4>about us</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo corrupti, fuga quia laudantium dolorem perspiciatis delectus tempora rem facilis ipsa vero explicabo quis alias commodi illum repellat! Suscipit, beatae!</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="single-footer">
+                    <h4>quick links</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-caret-right"></i> home</a></li>
+                        <li><a href=""><i class="fa-solid fa-caret-right"></i> about</a></li>
+                        <li><a href=""><i class="fa-solid fa-caret-right"></i>  services</a></li>
+                        <li><a href=""><i class="fa-solid fa-caret-right"></i> blog</a></li>
+                        <li><a href=""><i class="fa-solid fa-caret-right"></i> contact</a></li>
+                    </ul>
+                </div>
+                <div class="single-footer">
+                    <h4>opening hours</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-caret-right"></i> monday: 10.00 - 18.00</li>
+                        <li><i class="fa-solid fa-caret-right"></i> tuesday: 10.00 - 18.00</li>
+                        <li><i class="fa-solid fa-caret-right"></i> wednesday: 10.00 - 18.00</li>
+                        <li><i class="fa-solid fa-caret-right"></i> friday: 10.00 - 18.00</li>
+                        <li><i class="fa-solid fa-caret-right"></i> saturday: 10:00 - 14:00</li>
+                        <li><i class="fa-solid fa-caret-right"></i> sunday : closed Day</li>
+                    </ul>
+                </div>
+                <div class="single-footer">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-location-dot"></i> 44 North Street, Melbourne, Australia</a></li>
+                        <li><a href="tel:+613 4589 1207"><i class="fa-solid fa-phone"></i> +613 4589 1207</a></li>
+                        <li><a href="milto:info@domainname.com"><i class="fa-solid fa-envelope"></i> info@domainname.com</a></li>
+                        <li><a href=""><i class="fa-solid fa-globe"></i> www.domainname.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
+    <section class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copy">
+                    <p>&copy; 2022 all rights reserved.</p>
+                </div>
+                <div class="footer-menu">
+                    <a href="">privacy policy</a>
+                    <a href="">terms & conditions</a>
+                    <a href="">disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
