@@ -14,10 +14,11 @@ header nav ul {
   display: inline-flex;
   list-style: none;
 }
-/* header .main-menu>li{
+header .main-menu>li{
   position: relative;
-} */
+}
 header .main-menu ul.sub-menu {
+  position: absolute;
   display: none;
   background-color: rgba(255,255,255, 0.2);
   margin-top: 10px;
@@ -31,10 +32,10 @@ header nav ul li {
   padding: 5px 10px;
 }
 
-header .main-menu>li.has-child::after {
-  content: "";
-  width: 20px;
-  color: red;
+.main-menu li.has-child::after {
+  content: "\F282";
+  font-family:'Montserrat', sans-serif;
+  position: relative;
 
   
 
@@ -123,7 +124,7 @@ header nav ul li a {
   .split.right {
     right: 0;
     background: rgb(255,161,9);
-background: linear-gradient(90deg, rgba(255,161,9,1) 0%, rgba(203,129,10,1) 100%);
+    background: linear-gradient(90deg, rgba(255,161,9,1) 0%, rgba(203,129,10,1) 100%);
   }
   
   .hoverLeft .split.left,
@@ -338,4 +339,110 @@ ul{
   text-transform: uppercase;
   cursor: pointer;
   padding: 20px 40px;
+}
+
+.ps-features {
+  padding: 40px 0;
+  background-color: #f0f0f0;
+}
+.ps-features .ps-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  
+}
+.ps-features .ps-container .ps-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ps-features .ps-container .ps-box i {
+  font-size: 36px;
+  color: #000;
+}
+.ps-features .ps-container .ps-box h2 {
+  font-size: 24px;
+  color: rgb(255,161,9);
+}
+.ps-features .ps-container .ps-box h6 {
+  font-size: 16px;
+  color: #000;
+}
+.ps-features .ps-container .ps-box p {
+  font-size: 16px;
+  color: #6D6D6D;
+}
+
+/* main-product */
+.main-product {
+  padding: 50px 20px;
+}
+
+.main-product .new-product .title,
+.main-product .hot-product,
+.main-product .discount-product {
+  position: relative;
+}
+.main-product .new-product .title h1,
+.main-product .hot-product .title h1,
+.main-product .discount-product .title h1{
+  color: #f4f4f4;
+  font-size: 90px;
+}
+.main-product .new-product .title h4,
+.main-product .hot-product .title h4,
+.main-product .discount-product .title h4{
+  color: #1D1D1D;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+.main-product .all-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-product .all-product a {
+  padding: 10px 20px;
+  border: 1px solid #6D6D6D;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+  position: relative;
+  overflow: hidden;
+}
+.main-product .all-product a::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  background: #c8d3e6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.main-product .all-product a h6 {
+  color: rgb(255,161,9);
+}
+.main-product .all-product a p {
+  color: #6D6D6D;
+}
+.main-product .all-product a:hover::before {
+  height: 400%;
+}
+.main-product .all-product a:hover {
+  
+  text-decoration: none;
+}
+
+.step-progress {
+  background-color: #0087CC;
 }

@@ -1,11 +1,11 @@
 .footer-area {
-	background-image: url('img/footer.jpg');
+	/* background-image: url('img/footer.jpg');
 	background-size: cover;
-	background-position: center;
+	background-position: center; */
 	position: relative;
 	z-index: 2;
 	color: #fff;
-	padding: 160px 0 80px;
+	padding-top: 160px;
 	margin-top: -115px;
 	z-index: -1;
 }

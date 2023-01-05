@@ -21,8 +21,5 @@ right.addEventListener('mouseleave', () => {
 //add directional arrows to the menu
 
 $(document).ready(function(){
-  $('.sub-menu').parent('li').addClass('has-child position-relative');
-});
-$(document).ready(function(){
-  $('.sub-menu').addClass('position-absolute');
+  $('.sub-menu').parent('li').addClass('has-child');
 });
