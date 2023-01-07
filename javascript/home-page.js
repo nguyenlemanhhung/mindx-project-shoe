@@ -1,4 +1,4 @@
-const content = document.querySelector(".main");
+const content = document.querySelector(".split-container");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 

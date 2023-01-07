@@ -1,10 +1,10 @@
 
 .contact-main {
-    max-width: 1200px;
+    /* max-width: 1200px;
     margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 30px; */
 }
 .contact-main .contact-info .info-title {
     margin-bottom: 20px;

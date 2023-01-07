@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+    <link rel="stylesheet" href="/stylesheets/style.css">    
     <link rel="stylesheet" href="/stylesheets/web/footer.css">
     <link rel="stylesheet" href="/stylesheets/web/home-page.css">
     <link rel="stylesheet" href="/stylesheets/web/contact.css">
     <title>Contact</title>
 </head>
 <body id="contact-page">
-    <header>
+    <!-- <header>
         <nav class="main-menu">
             <ul>
                 <li><a href="/view/web/home/index.html">Home</a></li>
@@ -55,69 +55,71 @@
         </div>
         
     
-    </header>
+    </header> -->
     <main>
-        <div class="contact-main">
-            <div class="contact-info">
-                <div class="info-title">
-                    <h6 class="text-uppercase">// Contact details</h6>
-                    <h2>Contact us</h2>
-                    <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.</p>
+        <div class="container">
+            <div class="contact-main row">
+                <div class="contact-info col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="info-title">
+                        <h6 class="text-uppercase">// Contact details</h6>
+                        <h2>Contact us</h2>
+                        <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.</p>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-item">
+                            <div class="item-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="item-text">
+                                <h5>Our Address :</h5>
+                                <p>223 Nguyễn Xí, Phường 13, Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="item-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="item-text">
+                                <h5>Our Mailbox :</h5>
+                                <p>mindx.edu.vn</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="item-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="item-text">
+                                <h5>Our Phone :</h5>
+                                <p>+84 2877717789</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-group">
-                    <div class="info-item">
-                        <div class="item-icon">
-                            <i class="bi bi-geo-alt"></i>
+                <div class="contact-form col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="form-content">
+                        <div class="form-title">
+                            <h2>Ready to Get Started ?</h2>
+                            <p>You email address will not be published.Required fields are marked *</p>
                         </div>
-                        <div class="item-text">
-                            <h5>Our Address :</h5>
-                            <p>223 Nguyễn Xí, Phường 13, Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
-                        </div>
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="contactInputName" required>
+                                <label for="contactInputName">Your Name *</label>
+                                
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="contactInputEmail" required>
+                                <label >Your Email *</label>
+                                
+                            </div>
+                            <div class="form-group">
+                                
+                                <textarea class="form-control" id="messageTextarea" rows="3" required></textarea>
+                                <label for="messageTextarea">Message...</label>
+                            </div>
+                            <button type="submit" class="btn btn-contact">Send Message</button>
+                        </form>
                     </div>
-                    <div class="info-item">
-                        <div class="item-icon">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-                        <div class="item-text">
-                            <h5>Our Mailbox :</h5>
-                            <p>mindx.edu.vn</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="item-icon">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-                        <div class="item-text">
-                            <h5>Our Phone :</h5>
-                            <p>+84 2877717789</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <div class="form-content">
-                    <div class="form-title">
-                        <h2>Ready to Get Started ?</h2>
-                        <p>You email address will not be published.Required fields are marked *</p>
-                    </div>
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="contactInputName" required>
-                            <label for="contactInputName">Your Name *</label>
-                            
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="contactInputEmail" required>
-                            <label >Your Email *</label>
-                            
-                        </div>
-                        <div class="form-group">
-                            
-                            <textarea class="form-control" id="messageTextarea" rows="3" required></textarea>
-                            <label for="messageTextarea">Message...</label>
-                        </div>
-                        <button type="submit" class="btn btn-contact">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -125,68 +127,75 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.920530757348!2d106.70550345070151!3d10.81876260067474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294be7133289%3A0xba0d6479ca825690!2sMindX%20Technology%20School!5e0!3m2!1svi!2s!4v1672822616746!5m2!1svi!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main>
-    <footer class="footer-area">
+    <footer class="footer-area d-flex flex-column justify-content-center align-items-center">
         <div class="container">
-            <div class="footer">
-                <div class="single-footer">
+            <div class="footer-logo">
+                <img src="/assets/icons/shoe-logo.png" alt="">
+            </div>
+        
+            <div class="row">
+                <div class="single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
                     <h4>about us</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo corrupti, fuga quia laudantium dolorem perspiciatis delectus tempora rem facilis ipsa vero explicabo quis alias commodi illum repellat! Suscipit, beatae!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo corrupti, fuga quia laudantium dolorem .</p>
                     <div class="footer-social">
-                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div class="single-footer">
-                    <h4>quick links</h4>
-                    <ul>
-                        <li><a href=""><i class="fa-solid fa-caret-right"></i> home</a></li>
-                        <li><a href=""><i class="fa-solid fa-caret-right"></i> about</a></li>
-                        <li><a href=""><i class="fa-solid fa-caret-right"></i>  services</a></li>
-                        <li><a href=""><i class="fa-solid fa-caret-right"></i> blog</a></li>
-                        <li><a href=""><i class="fa-solid fa-caret-right"></i> contact</a></li>
-                    </ul>
-                </div>
-                <div class="single-footer">
+                <div class="footer-opening-hours single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
                     <h4>opening hours</h4>
                     <ul>
-                        <li><i class="fa-solid fa-caret-right"></i> monday: 10.00 - 18.00</li>
-                        <li><i class="fa-solid fa-caret-right"></i> tuesday: 10.00 - 18.00</li>
-                        <li><i class="fa-solid fa-caret-right"></i> wednesday: 10.00 - 18.00</li>
-                        <li><i class="fa-solid fa-caret-right"></i> friday: 10.00 - 18.00</li>
-                        <li><i class="fa-solid fa-caret-right"></i> saturday: 10:00 - 14:00</li>
-                        <li><i class="fa-solid fa-caret-right"></i> sunday : closed Day</li>
+                        <li><i class="bi bi-clock"></i> Monday - Saturday: <span>9.00 - 21.00</span></li>        
+                        <li><i class="bi bi-clock"></i> Sunday : <span>9.00 - 19.00</span></li>
                     </ul>
                 </div>
-                <div class="single-footer">
+                <div class="footer-links single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
+                    <h4>quick links</h4>
+                    <ul>
+                        <li><a href="/view/web/home/index.html"><i class="link-icon bi bi-arrow-right"></i>Home</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>About</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Product</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Blog</a></li>
+                        <li><a href="/view/web/contact/contact.html"><i class="link-icon bi bi-arrow-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class=" footer-contact single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
                     <h4>contact us</h4>
                     <ul>
-                        <li><a href=""><i class="fa-solid fa-location-dot"></i> 44 North Street, Melbourne, Australia</a></li>
-                        <li><a href="tel:+613 4589 1207"><i class="fa-solid fa-phone"></i> +613 4589 1207</a></li>
-                        <li><a href="milto:info@domainname.com"><i class="fa-solid fa-envelope"></i> info@domainname.com</a></li>
-                        <li><a href=""><i class="fa-solid fa-globe"></i> www.domainname.com</a></li>
+                        <li>
+                            <div class="agency-1">
+                                <p>- Chi nhánh 1</p>
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i>44 North Street, Melbourne, Australia</li>
+                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
+                                </ul>
+                            </div>
+                            <div class="agency-2">
+                                <p>- Chi nhánh 2</p>
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i>44 North Street, Melbourne, Australia</li>
+                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><i class="bi bi-envelope"></i> info@domainname.com</li>
+                        <li><i class="bi bi-globe-americas"></i> www.domainname.com</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area mb-4">
+            <div class="container">
+                <div class="footer-bottom">                    
+                    <p class="d-flex justify-content-center align-items-center flex-wrap"> 2022 all rights reserved.<span><a href="">Privacy policy</a></span><span><a href="">Terms & conditions</a></span><span><a href="">Disclaimer</a></span>  </p>
+                                     
                 </div>
             </div>
         </div>
     </footer>
-
-    <section class="footer-bottom-area">
-        <div class="container">
-            <div class="footer-bottom">
-                <div class="copy">
-                    <p>&copy; 2022 all rights reserved.</p>
-                </div>
-                <div class="footer-menu">
-                    <a href="">privacy policy</a>
-                    <a href="">terms & conditions</a>
-                    <a href="">disclaimer</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
