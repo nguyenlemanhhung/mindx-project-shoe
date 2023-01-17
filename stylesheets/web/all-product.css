@@ -1,11 +1,8 @@
 main .all-product-content {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
 }
 
 main .all-product-content .product-filter {
-    width: 25%;
     padding: 20px;
     height: min-content;
     min-height:auto ;
@@ -246,7 +243,6 @@ main .all-product-content .product-filter .filter-title h5::after {
 }
 main .all-product-content .showcase-product  {
     padding: 0 20px;
-    width: 75%;
 }
 .product-view .grid-container {
     display: grid;
@@ -260,12 +256,16 @@ main .all-product-content .showcase-product  {
     overflow: hidden;
     position: relative;
   }
-  .product-view .grid-container .grid-item img {
+.showcase-product .grid-item .banner {
+  color: #FFF;
+  background-color: rgb(255,161,9);
+}
+.product-view .grid-container .grid-item img {
     max-width: 100%;
     height: auto;
     position: relative;
-  }
-  .product-view .grid-container .grid-item .image-item {
+}
+.product-view .grid-container .grid-item .image-item {
     position: relative;
     margin-bottom: 20px;
   }
@@ -300,40 +300,35 @@ main .all-product-content .showcase-product  {
   
 .showcase-product .pagination a:hover:not(.active) {background-color: #ddd;}
 @media only screen and (max-width: 1199.98px) {
-    .product-view .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-    }
+  .showcase-product .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
 }
 @media only screen and (max-width: 991.98px) {
-    .product-view .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-    }
+  
+  .showcase-product .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .all-product-content .product-filter {
+    position: static;
+    
+  }
+  main .all-product-content .filter-by-brand .filter-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (max-width: 767.98px) {
-    main .all-product-content .product-filter {
-        width: 30%;
-    }
-    .product-view .grid-container {
-      display: grid;
+    
+    .showcase-product .grid-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
     }
   }
   
   @media only screen and (max-width: 575.98px) {
-    main .all-product-content .product-filter {
-        width: 40%;
-    }
-    main .all-product-content .product-view  {
-        width: 60%;  
-    }
-    .product-view .grid-container {
-      display: grid;
+    .showcase-product .grid-container {
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 10px;
     }
   }
