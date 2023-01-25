@@ -1,5 +1,5 @@
 main .all-product-content {
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
 }
 
 main .all-product-content .product-filter {
@@ -10,36 +10,32 @@ main .all-product-content .product-filter {
     position: sticky;
     top: 50px;
     bottom: 50px;
-    color: #c8d3e6;
+    color: #0087cc;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     
 }
+main .all-product-content .product-filter .filter-container {
+  margin: 0;
+}
+.filter-container .filter-item {
+  padding: 20px 0;
+  position: relative;
 
-.filter-item {
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
 main .all-product-content .product-filter .filter-title h5{
-    padding: 5px 10px;
     position: relative;
+    color: #FFa109;
 }
-main .all-product-content .product-filter .filter-title h5::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 50%;
-    left: 10px;
-    bottom: 0;
-    background-color: red;
-}
-.range-slider {
+
+.product-filter .range-slider {
     position: relative;
     width: 200px;
     height: 35px;
     text-align: center;
 }
 
-.range-slider input {
+.product-filter .range-slider input {
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -52,14 +48,14 @@ main .all-product-content .product-filter .filter-title h5::after {
     padding: 0;
 }
 
-.range-slider input::-webkit-slider-thumb {
+.product-filter .range-slider input::-webkit-slider-thumb {
     pointer-events: all;
     position: relative;
     z-index: 1;
     outline: 0;
 }
 
-.range-slider input::-moz-range-thumb {
+.product-filter .range-slider input::-moz-range-thumb {
     pointer-events: all;
     position: relative;
     z-index: 10;
@@ -67,14 +63,14 @@ main .all-product-content .product-filter .filter-title h5::after {
     width: 9px;
 }
 
-.range-slider input::-moz-range-track {
+.product-filter .range-slider input::-moz-range-track {
     position: relative;
     z-index: -1;
     background-color: rgba(0, 0, 0, 1);
     border: 0;
 }
 
-.range-slider input:last-of-type::-moz-range-track {
+.product-filter .range-slider input:last-of-type::-moz-range-track {
     -moz-appearance: none;
     background: none transparent;
     border: 0;
@@ -91,7 +87,7 @@ main .all-product-content .product-filter .filter-title h5::after {
 .range-slider .output {
     position: absolute;
     text-align: center;
-    color: #FFa109;
+    color: #0087cc;
     display: inline-block;
     bottom: 60%;
 
@@ -238,9 +234,6 @@ main .all-product-content .product-filter .filter-title h5::after {
   .checkbox-wrapper label::before {
     transition: 0.25s all ease;
   }
-.filter-item {
-    margin-bottom: 20px;
-}
 main .all-product-content .showcase-product  {
     padding: 0 20px;
 }

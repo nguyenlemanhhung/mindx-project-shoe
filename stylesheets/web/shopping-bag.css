@@ -1,4 +1,6 @@
-main .shopping-bag .modal-dialog {
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Merriweather:wght@300;400;700;900&family=Notable&family=Poppins:wght@100;200;300;400;500;600;700;900&family=Sirin+Stencil&display=swap');
+
+.shopping-bag .modal-dialog {
     max-width: 80%;
   }
   .shopping-bag .bag-header {
@@ -8,6 +10,13 @@ main .shopping-bag .modal-dialog {
   .shopping-bag .bag-header .bag-header-logo img{
     width: 50px;
     height: auto;
+    margin-right: 10px;
+  }
+  .shopping-bag .bag-header .bag-header-logo .logo-text .shop-name {
+    font-family: 'Londrina Outline', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
   }
   .shopping-bag .bag-header .btn-close {
     color: #fff;
@@ -84,7 +93,6 @@ main .shopping-bag .modal-dialog {
   }
   .shopping-bag .bag-body .bag-tab .btn-remove:hover {
     border: 1px solid red;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
   }
   .shopping-bag .bag-body .bag-tab .btn-remove i{
     color: #c8d3e6;
@@ -130,7 +138,7 @@ main .shopping-bag .modal-dialog {
   }
 }
 @media only screen and (max-width: 767.98px) {
-  main .shopping-bag .modal-dialog {
+  .shopping-bag .modal-dialog {
     max-width: 100%;
   }
   .shopping-bag .bag-body .bag-title {

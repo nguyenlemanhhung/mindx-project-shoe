@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="/stylesheets/web/home-page.css">
     <link rel="stylesheet" href="/stylesheets/web/header-top.css">
     <link rel="stylesheet" href="/stylesheets/web/all-product.css">
-    <link rel="stylesheet" href="/stylesheets/web/footer.css">  
-    <link rel="stylesheet" href="/stylesheets/web/test.css">  
+    <link rel="stylesheet" href="/stylesheets/web/footer.css">   
 
     <title>All Product</title>
 </head>
-<body>
+<body id="all-product">
     <div class="chat-online">
         <div class="list-app d-flex justify-content-center align-items-center" onclick="this.classList.toggle('open')">
             <i class="bi bi-wechat"></i>
@@ -31,123 +30,12 @@
         </div>
     </div>
     <button onclick="backTop()" id="btnBackTop"><i class="bi bi-chevron-double-up"></i></button>
-    <header>
-        <div class="header-container"> 
-            <div class="header-top">
-                <nav class="navbar navbar-expand-lg main-menu">
-                    <button onclick="this.classList.toggle('rotate-span')" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                        <span class="span1"></span>
-                        <span class="span2"></span>
-                        <span class="span3"></span>
-                    </button>   
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Product
-                                </a>
-                                <ul class="dropdown-menu multi-level m-0 p-0" role="menu" aria-labelledby="dropdownMenu">                         
-                                    <li class="dropdown-submenu">
-                                        <a  class="dropdown-item" tabindex="-1" href="#">Men's Shoes</a>
-                                            <ul class="dropdown-menu m-0 p-0">
-                                                <li class="dropdown-item"><a tabindex="-1" href="#">Sport Shoes</a></li>
-                                                <li class="dropdown-item"><a href="/view/web/all-product.html">Southwest shoes</a></li>
-                                                <li class="dropdown-item"><a href="/view/web/all-product.html">Second level</a></li>                                           
-                                            </ul>
-                                    </li>
-                                    <div class="dropdown-divider m-0"></div>
-                                    <li class="dropdown-submenu">
-                                        <a  class="dropdown-item" tabindex="-1" href="#">Women's Shoes</a>
-                                            <ul class="dropdown-menu m-0 p-0">
-                                                <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
-                                                <li class="dropdown-item"><a href="#">Second level</a></li>
-                                                <li class="dropdown-item"><a href="#">Boots</a></li>                                           
-                                            </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/view/web/contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                </nav> 
-                <div class="header-logo d-flex justify-content-center align-items-center">
-                    <img src="/assets/icons/logo-shoe.png" alt="">
-                    <div class="logo-text">
-                        <h2 class="shop-name">SneakerPlug</h2>
-                        <p class="slogan">More energy for the new day</p>
-                    </div>
-                </div>
-                <div class="header-action">
-                    <div class="search-mobile" onclick="this.classList.toggle('open-search')">
-                        <i class="bi bi-search"></i>
-                        
-                        <form class="d-flex my-2 my-lg-0 search-extensions search">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn my-2 my-sm-0" type="submit">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                        
-                        
-                    </div>
-                    <form class="form-inline my-2 my-lg-0 search-web search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn my-2 my-sm-0" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </form>
-                    <button type="button" class="btn header-cart text-white" data-toggle="modal" data-target="#exampleModalCenter">
-                        <i class="bi bi-cart3"></i>
-                        <div class="order-number">2</div>
-                    </button>
-                    
-                    <div class="header-profile">
-                        <div class="dropdown">
-                            <a class="btn dropdown-toggle d-flex justify-content-center align-items-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <div class="header-avt-user">
-                                <img src="/assets/images/avt/avt-1.jpeg" alt="">
-                              </div>
-                            </a>
-                          
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#"><i class="bi bi-gear"></i>Edit Profile</a>
-                              <a class="dropdown-item" href="#"><i class="bi bi-heart color-pink"></i>favorites list</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item log-out" href="#"><i class="bi bi-box-arrow-right"></i>Log Out</a>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="bg-header">
-                <img class="bg-left" src="/assets/images/background/bg-left.png" alt="">
-                <img class="bg-right" src="/assets/images/background/bg-right.png" alt="">
-                
-            </div>                
-        </div>   
-        
-        
-    </header>
+    
     <main>
         <div class="container-fluid">
             <div class="all-product-content row">
                 
-                <div class="col-lg-3 product-filter mb-4 mt-4">
+                <div class="col-lg-3 product-filter">
                     <div class="filter-container row">
                         <div class="filter-by-feature filter-item col-lg-12 col-md-4 col-sm-12 col-12">
                             <div class="filter-title d-flex mb-4">
@@ -971,79 +859,6 @@
         </div>
     </main>
 
-    <footer class="footer-area d-flex flex-column justify-content-center align-items-center">
-        <div class="container">
-            <div class="footer-logo d-flex justify-content-center align-items-center">
-                <img src="/assets/icons/logo-shoe.png" alt="">
-                <div class="logo-text">
-                    <h2 class="shop-name">SneakerPlug</h2>
-                    <p class="slogan">More energy for the new day</p>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-                    <h4>about us</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo corrupti, fuga quia laudantium dolorem .</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-opening-hours single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-                    <h4>opening hours</h4>
-                    <ul>
-                        <li><i class="bi bi-clock"></i> Monday - Saturday: <span>9.00 - 21.00</span></li>        
-                        <li><i class="bi bi-clock"></i> Sunday : <span>9.00 - 19.00</span></li>
-                    </ul>
-                </div>
-                <div class="footer-links single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-                    <h4>quick links</h4>
-                    <ul>
-                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Home</a></li>
-                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>About</a></li>
-                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Product</a></li>
-                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Blog</a></li>
-                        <li><a href="/view/web/contact.html"><i class="link-icon bi bi-arrow-right"></i>Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class=" footer-contact single-footer col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-                    <h4>contact us</h4>
-                    <ul>
-                        <li>
-                            <div class="agency-1">
-                                <p>- Chi nhánh 1</p>
-                                <ul>
-                                    <li><i class="bi bi-geo-alt"></i>44 North Street, Melbourne, Australia</li>
-                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
-                                </ul>
-                            </div>
-                            <div class="agency-2">
-                                <p>- Chi nhánh 2</p>
-                                <ul>
-                                    <li><i class="bi bi-geo-alt"></i>44 North Street, Melbourne, Australia</li>
-                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><i class="bi bi-envelope"></i> info@domainname.com</li>
-                        <li><i class="bi bi-globe-americas"></i> www.domainname.com</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom-area mb-4">
-            <div class="container">
-                <div class="footer-bottom">                    
-                    <p class="d-flex justify-content-center align-items-center flex-wrap"> 2022 all rights reserved.<span><a href="">Privacy policy</a></span><span><a href="">Terms & conditions</a></span><span><a href="">Disclaimer</a></span>  </p>
-                                     
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

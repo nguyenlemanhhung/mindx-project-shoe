@@ -1,8 +1,10 @@
 #modalSignInUp {
     background-image: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
 }
-
-#modalSignInUp .container {
+#modalSignInUp .modal-dialog {
+  max-width: 90%;
+}
+#modalSignInUp .wrapper {
     position: relative;
     width: 100%;
     background-color: #fff;
@@ -17,7 +19,12 @@
     top: 0;
     left: 0;
 }
-  
+#modalSignInUp .forms-container .btn-close {
+  position: relative;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
 #modalSignInUp .signin-signup {
     position: absolute;
     top: 50%;
@@ -187,7 +194,7 @@
     grid-template-columns: repeat(2, 1fr);
 }
   
-#modalSignInUp .container:before {
+#modalSignInUp .wrapper:before {
     content: "";
     position: absolute;
     height: 2000px;
@@ -195,7 +202,7 @@
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
-    background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+    background-image: linear-gradient(0deg, rgba(255,161,9,0.1) 5%, rgba(255,161,9,0.5) 10%, rgba(255,161,9,1) 100%);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: 6;
@@ -239,10 +246,14 @@
 }
   
 #modalSignInUp .panel p {
-    font-size: 0.95rem;
+    font-size: 15px;
     padding: 0.7rem 0;
 }
+#modalSignInUp .panel p span {
+  color: #FFa109;
+  font-size: 16px;
   
+} 
 #modalSignInUp .btn.transparent {
     margin: 0;
     background: none;
@@ -260,169 +271,173 @@
   
   /* ANIMATION */
   
-  #modalSignInUp .container.sign-up-mode:before {
+  #modalSignInUp .wrapper.sign-up-mode:before {
     transform: translate(100%, -50%);
     right: 52%;
+    background-image: linear-gradient(0deg, rgba(235,140,180,0.1) 5%, rgba(235,140,180,0.5) 10%, rgba(235,140,180,1) 100%);
   }
   
-  #modalSignInUp .container.sign-up-mode .left-panel .image,
-  #modalSignInUp  .container.sign-up-mode .left-panel .content {
+  #modalSignInUp .wrapper.sign-up-mode .left-panel .image,
+  #modalSignInUp  .wrapper.sign-up-mode .left-panel .content {
     transform: translateX(-800px);
   }
   
-  #modalSignInUp .container.sign-up-mode .signin-signup {
+  #modalSignInUp .wrapper.sign-up-mode .signin-signup {
     left: 25%;
   }
   
-  #modalSignInUp .container.sign-up-mode form.sign-up-form {
+  #modalSignInUp .wrapper.sign-up-mode form.sign-up-form {
     opacity: 1;
     z-index: 2;
   }
   
-  #modalSignInUp .container.sign-up-mode form.sign-in-form {
+  #modalSignInUp .wrapper.sign-up-mode form.sign-in-form {
     opacity: 0;
     z-index: 1;
   }
   
-  #modalSignInUp  .container.sign-up-mode .right-panel .image,
-  #modalSignInUp .container.sign-up-mode .right-panel .content {
+  #modalSignInUp  .wrapper.sign-up-mode .right-panel .image,
+  #modalSignInUp .wrapper.sign-up-mode .right-panel .content {
     transform: translateX(0%);
   }
   
-  #modalSignInUp .container.sign-up-mode .left-panel {
+  #modalSignInUp .wrapper.sign-up-mode .left-panel {
     pointer-events: none;
   }
   
-  #modalSignInUp .container.sign-up-mode .right-panel {
+  #modalSignInUp .wrapper.sign-up-mode .right-panel {
     pointer-events: all;
   }
-  
-  @media (max-width: 870px) {
-    #modalSignInUp  .container {
-      min-height: 800px;
-      height: 100vh;
-    }
-    #modalSignInUp .signin-signup {
-      width: 100%;
-      top: 95%;
-      transform: translate(-50%, -100%);
-      transition: 1s 0.8s ease-in-out;
-    }
-  
-    #modalSignInUp .signin-signup,
-    #modalSignInUp .container.sign-up-mode .signin-signup {
-      left: 50%;
-    }
-  
-    #modalSignInUp .panels-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr 1fr;
-    }
-  
-    #modalSignInUp .panel {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      padding: 2.5rem 8%;
-      grid-column: 1 / 2;
-    }
-  
-    #modalSignInUp .right-panel {
-      grid-row: 3 / 4;
-    }
-  
-    #modalSignInUp .left-panel {
-      grid-row: 1 / 2;
-    }
-  
-    #modalSignInUp .image {
-      width: 200px;
-      transition: transform 0.9s ease-in-out;
-      transition-delay: 0.6s;
-    }
-  
-    #modalSignInUp .panel .content {
-      padding-right: 15%;
-      transition: transform 0.9s ease-in-out;
-      transition-delay: 0.8s;
-    }
-  
-    #modalSignInUp .panel h3 {
-      font-size: 1.2rem;
-    }
-  
-    #modalSignInUp .panel p {
-      font-size: 0.7rem;
-      padding: 0.5rem 0;
-    }
-  
-    #modalSignInUp .btn.transparent {
-      width: 110px;
-      height: 35px;
-      font-size: 0.7rem;
-    }
-  
-    #modalSignInUp .container:before {
-      width: 1500px;
-      height: 1500px;
-      transform: translateX(-50%);
-      left: 30%;
-      bottom: 68%;
-      right: initial;
-      top: initial;
-      transition: 2s ease-in-out;
-    }
-  
-    #modalSignInUp .container.sign-up-mode:before {
-      transform: translate(-50%, 100%);
-      bottom: 32%;
-      right: initial;
-    }
-  
-    #modalSignInUp .container.sign-up-mode .left-panel .image,
-    #modalSignInUp .container.sign-up-mode .left-panel .content {
-      transform: translateY(-300px);
-    }
-  
-    #modalSignInUp .container.sign-up-mode .right-panel .image,
-    #modalSignInUp .container.sign-up-mode .right-panel .content {
-      transform: translateY(0px);
-    }
-  
-    #modalSignInUp .right-panel .image,
-    #modalSignInUp .right-panel .content {
-      transform: translateY(300px);
-    }
-  
-    #modalSignInUp .container.sign-up-mode .signin-signup {
-      top: 5%;
-      transform: translate(-50%, 0);
-    }
+
+@media only screen and (max-width: 991.98px) {
+  #modalSignInUp .wrapper {
+    min-height: 800px;
+    height: 100vh;
+  }
+  #modalSignInUp .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  #modalSignInUp .signin-signup,
+  #modalSignInUp .wrapper.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  #modalSignInUp .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  #modalSignInUp .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  #modalSignInUp .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  #modalSignInUp .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  #modalSignInUp .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  #modalSignInUp .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  #modalSignInUp .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  #modalSignInUp .panel p {
+    font-size: 14px;
+    padding: 0.5rem 0;
   }
   
-  @media (max-width: 570px) {
-    #modalSignInUp form {
-      padding: 0 1.5rem;
-    }
-  
-    #modalSignInUp .image {
-      display: none;
-    }
-    #modalSignInUp .panel .content {
-      padding: 0.5rem 1rem;
-    }
-    #modalSignInUp .container {
-      padding: 1.5rem;
-    }
-  
-    #modalSignInUp .container:before {
-      bottom: 72%;
-      left: 50%;
-    }
-  
-    #modalSignInUp .container.sign-up-mode:before {
-      bottom: 28%;
-      left: 50%;
-    }
+  #modalSignInUp .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
   }
+
+  #modalSignInUp .wrapper:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  #modalSignInUp .wrapper.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 28%;
+    right: initial;
+  }
+
+  #modalSignInUp .wrapper.sign-up-mode .left-panel .image,
+  #modalSignInUp .wrapper.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  #modalSignInUp .wrapper.sign-up-mode .right-panel .image,
+  #modalSignInUp .wrapper.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  #modalSignInUp .right-panel .image,
+  #modalSignInUp .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  #modalSignInUp .wrapper.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media only screen and (max-width: 575.89px) {
+  #modalSignInUp .modal-dialog {
+    margin: 0 auto;
+  }
+  #modalSignInUp form {
+    padding: 0 1.5rem;
+  }
+
+  #modalSignInUp .image {
+    display: none;
+  }
+  #modalSignInUp .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  #modalSignInUp .wrapper {
+    padding: 1.5rem;
+  }
+
+  #modalSignInUp .wrapper:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  #modalSignInUp .wrapper.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
   
