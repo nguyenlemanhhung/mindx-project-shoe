@@ -126,7 +126,7 @@ header {
     line-height: 0;
 }
 .header-container .header-content .social-link a i {
-    color: #fff;
+    font-size: 25px;
 }
 .header-container .header-content .social-link .social-link-item {
     position: relative;
@@ -134,6 +134,13 @@ header {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
 }
 .header-container .header-content .social-link .social-link-item .sub-text {
     position: absolute;
@@ -163,22 +170,36 @@ header {
 .header-container .header-content .social-link .link-facebook .sub-text::after {
     background-color: #007bff;
 }
-.header-container .social-link .link-facebook:hover i {
+.header-container .social-link .link-facebook i {
     color: #007bff;
+}
+.header-container .social-link .link-facebook:hover {
+    background-color: #007bff;
+}
+.header-container .social-link .link-twitter i {
+    color: #1DA1F2;
+}
+.header-container .social-link .link-twitter:hover {
+    background-color: #1DA1F2;
+}
+.header-container .social-link .link-linkedin i {
+    color: #2962ff;
+}
+.header-container .social-link .link-linkedin:hover {
+    background-color: #2962ff;
+}
+
+.header-container .social-link .social-link-item:hover i {
+    color: #fff;
 }
 .header-container .header-content .social-link .link-twitter .sub-text,
 .header-container .header-content .social-link .link-twitter .sub-text::after {
     background-color: #1DA1F2;
 }
-.header-container .social-link .link-twitter:hover i {
-    color: #1DA1F2;
-}
+
 .header-container .header-content .social-link .link-linkedin .sub-text,
 .header-container .header-content .social-link .link-linkedin .sub-text::after {
     background-color: #2962ff;
-}
-.header-container .social-link .link-linkedin:hover i {
-    color: #2962ff;
 }
 
 .header-container .social-link .social-link-item:hover span.sub-text {
