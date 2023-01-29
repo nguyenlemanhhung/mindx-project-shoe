@@ -27,6 +27,10 @@ main .all-product-content .product-filter .filter-title h5{
     position: relative;
     color: #FFa109;
 }
+main .all-product-content .product-filter .filter-title h5 span {
+  font-size: 14px;
+  color: #555;
+}
 
 .product-filter .range-slider {
     position: relative;

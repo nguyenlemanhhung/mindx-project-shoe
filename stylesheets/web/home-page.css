@@ -6,39 +6,34 @@
 main {
   margin-bottom: 50px;
 }
+
+/* ps-features */
 main .ps-features {
   padding: 40px 0;
 }
-
 main .ps-features .ps-container .ps-box {
   padding: 20px 10px;
+}
+main .ps-features .ps-container .ps-box img {
+  width: 50px;
+  margin-right: 10px;
 }
 main .ps-features .ps-container .ps-box:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-main .ps-features .ps-container .ps-box i {
-  font-size: 40px;
-  color: #0087CC;
-}
-main .ps-features .ps-container .ps-box h2 {
-  font-size: 24px;
-  color: rgb(255,161,9);
-}
 main .ps-features .ps-container .ps-box h6 {
   font-size: 16px;
-  color: #000;
-  margin-bottom: 10px;
+  color: #5aaad1;
 }
 main .ps-features .ps-container .ps-box p {
-  font-size: 15px;
+  font-size: 14px;
   color: #6D6D6D;
-  text-align: center;
 }
 
 /* main-product */
 
 main .main-product {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 
@@ -270,6 +265,9 @@ main .main-product .btn-product a:hover {
   }
 }
 @media only screen and (max-width: 575.89px) {
+  main .ps-features .ps-container .ps-box img {
+    width: 40px;
+  }
   main .main-product .new-product .title h1,
   main .main-product .hot-product .title h1,
   main .main-product .discount-product .title h1,
@@ -282,4 +280,18 @@ main .main-product .btn-product a:hover {
   main .customer-feedback .title h4{
     font-size: 20px;
   }
+}
+@media only screen and (max-width: 475.89px) {
+  .ps-features .row {
+    flex-direction: column;
+  }
+  .ps-features .row-item {
+    max-width: 100%;
+  }
+  .customer-feedback .feedback-content .user-feedback-name h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  
 }

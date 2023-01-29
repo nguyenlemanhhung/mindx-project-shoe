@@ -22,6 +22,9 @@ h1, h2, h3, h4, h5, h6 , p, a {
 a {
     text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 ul {
     list-style: none;
 }
@@ -161,14 +164,14 @@ ul {
   z-index: 0;
   
 }
-.new-product .showcase-product .grid-container .grid-item .banner img {
+.showcase-product .grid-container .grid-item .new-product-banner img {
   position: absolute;
   top: -2px;
   left: 3px;
   width: 60px;
 
 }
-.new-product .showcase-product .grid-container .grid-item .banner p {
+.showcase-product .grid-container .grid-item .new-product-banner p {
   position: absolute;
   z-index: 2;
   color: #dc6ff0;
@@ -176,14 +179,14 @@ ul {
   font-size: 14px;
   transform: rotate(-45deg) translate(-1px, -4px);
 }
-.hot-product .showcase-product .grid-container .grid-item .banner img {
+.showcase-product .grid-container .grid-item .hot-product-banner img {
   position: absolute;
   top: -4px;
   left: -12px;
   width: 60px;
 
 }
-.hot-product .showcase-product .grid-container .grid-item .banner p {
+.showcase-product .grid-container .grid-item .hot-product-banner p {
   position: absolute;
   z-index: 2;
   color: #fff;
@@ -193,14 +196,14 @@ ul {
   font-size: 14px;
 }
 
-.discount-product .showcase-product .grid-container .grid-item .banner img {
+.showcase-product .grid-container .grid-item .discount-product-banner img {
   position: absolute;
   top: -1px;
   left: -10px;
   width: 60px;
 
 }
-.discount-product .showcase-product .grid-container .grid-item .banner p {
+.showcase-product .grid-container .grid-item .discount-product-banner p {
   position: absolute;
   z-index: 2;
   color: #fff;
@@ -260,7 +263,7 @@ ul {
   font-size: 18px;
   color: #6D6D6D;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .showcase-product .grid-container .grid-item .item-info .price-item {
   font-size: 18px;

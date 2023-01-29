@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/stylesheets/web/style.css">
-    <link rel="stylesheet" href="/stylesheets/web/home-page.css">
     <link rel="stylesheet" href="/stylesheets/web/header-top.css">
+    <link rel="stylesheet" href="/stylesheets/web/sign-in-up.css">
+    <link rel="stylesheet" href="/stylesheets/web/shopping-bag.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/web/home-page.css"> -->
     <link rel="stylesheet" href="/stylesheets/web/all-product.css">
-    <link rel="stylesheet" href="/stylesheets/web/footer.css">   
+    <link rel="stylesheet" href="/stylesheets/web/footer.css">  
 
     <title>All Product</title>
 </head>
@@ -30,6 +32,459 @@
         </div>
     </div>
     <button onclick="backTop()" id="btnBackTop"><i class="bi bi-chevron-double-up"></i></button>
+    <header>
+        <div class="header-container"> 
+            <div class="header-top">
+                <div class="main-menu">
+                    <div class="btn-toggle">
+                        <span class="span-1"></span>
+                        <span class="span-2"></span>
+                        <span class="span-3"></span>
+                    </div>
+                    <div class="circle-overlay"></div>
+                    <nav role="navigation" class="menu">
+                        
+                        <ul class="nav-items">
+                            <li class="nav-item">
+                                <a href="/view/web/index.html" class="nav-link">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">
+                                    <span>Products</span>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="submenu-items d-flex">
+                                        <li class="submenu-item">
+                                            <a href="#" class="submenu-link font-weight-bold">
+                                                <span>Men's Shoes</span>
+                                            </a>
+                                            <nav class="child-submenu">
+                                                <ul class="child-submenu-items">
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Sport Shoes</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Southwest shoes</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Boots</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </li>
+                                        <div class="vertical-line"></div>
+                                        <li class="submenu-item">
+                                            <a href="#" class="submenu-link font-weight-bold">
+                                                <span>Women's Shoes</span>
+                                            </a>
+                                            <nav class="child-submenu">
+                                                <ul class="child-submenu-items">
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Sport Shoes</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Southwest shoes</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="child-submenu-item">
+                                                        <a href="" class="child-submenu-link">
+                                                            <span>Boots</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> 
+                            
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span>Blog</span>
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a href="/view/web/contact.html" class="nav-link">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-action">
+                    <div class="header-search">
+                        <div class="search-toggler" onclick="this.classList.toggle('open-search')">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <form class="form-inline my-2 my-lg-0 search-form">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <button type="button" class="btn header-cart text-white" data-toggle="modal" data-target="#modalShoppingBag">
+                        <i class="bi bi-cart3"></i>
+                        <div class="order-number">3</div>
+                    </button>
+                    
+                    <div class="header-profile">
+                        <div class="no-user">
+                            <button type="button" class="btn-sign-in" data-toggle="modal" data-target="#modalSignInUp">
+                                Sign In
+                            </button>
+                            <button type="button" class="btn-sign-up" data-toggle="modal" data-target="#modalSignInUp">
+                                Sign Up
+                            </button>
+                        </div>
+                        
+                        <!-- <div class="has-user">
+                            <div class="user-avt" onclick="this.classList.toggle('open-setting')">
+                                <img src="/assets/images/avt/avt-1.jpeg" alt="">
+                            </div>
+                            <div class="user-setting">
+                                <ul class="m-0">
+                                    <li class="edit">
+                                        <a class="edit-link" href="">
+                                            <i class="bi bi-pencil-square"></i>
+                                            <span>Edit Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="favorite">
+                                        <a class="favorite-link" href="">
+                                            <i class="bi bi-heart-fill color-pink"></i>
+                                            <span>Favorites List</span>
+                                        </a>
+                                    </li>
+                                    <li class="logout">
+                                        <a class="logout-link" href="">
+                                            <i class="bi bi-box-arrow-right"></i>
+                                            <span>Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+          
+            <div class="header-content">
+                <div class="overlay"></div>
+                <div class="left-side">
+                    <div class="logo">
+                        <h2 class="shop-name">sneakerPlug</h2>
+                        <div class="logo-right">
+                            <div class="shop-logo d-flex justify-content-center align-items-center">
+                                <img src="/assets/icons/logo-shoe.png" alt="">  
+                            </div>
+                            <div class="shop-slogan">
+                                <div class="slogan-left d-flex justify-content-start">
+                                    <p>Mỗi bước nhỏ</p>
+                                </div>
+                                <div class="slogan-center d-flex justify-content-center">
+                                    <p>đều dẫn tới </p>
+                                </div>
+                                <div class="slogan-right d-flex justify-content-end">
+                                    <p >thành công</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm-product">
+                    <div class="sm-product-img-container">
+                        <img src="/assets/images/slider-header/sm-img-1.jpeg" class="sm-product-img" alt="">
+                    </div>
+                    </div>
+                    <div class="social-link d-flex justify-content-center align-items-center">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <img src="/assets/images/slider-header/img-1.jpeg" class="backdrop-img" alt="">
+                    <div class="content">
+                        <div class="product-detail mr-2">
+                            <h1 class="product-title mb-5">Điểm nhấn cho phong cách</h1>
+                            <p class="product-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            
+                        </div>
+                        <div class="product-img-container">
+                            <img src="/assets/images/slider-header/img-1.jpeg" class="product-img" alt="">
+                        </div>
+                        <button class="next-btn">
+                            <img src="/assets/icons/next.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                
+            </div>                
+        </div>
+
+        <!-- Modal Sign In-Up -->
+        <div class="modal fade" id="modalSignInUp" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="wrapper">
+                    <div class="forms-container">
+                        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x"></i>
+                        </button>
+                        <div class="signin-signup">
+                            <form action="#" class="sign-in-form">
+                                <h2 class="title text-center">Chào mừng bạn <br> quay lại !</h2>
+
+                                <div class="form-group w-100">
+                                    <input type="email" class="form-control" id="emailSignIn" required>
+                                    <label for="emailSignIn">Địa chỉ Email</label>
+                                    <i class="bi bi-envelope-fill icon-left"></i>
+                                </div>
+
+                                <div class="form-group w-100">                                  
+                                    <input type="password" class="form-control" id="passwordSignIn" required>
+                                    <label for="passwordSignIn">Mật khẩu</label>  
+                                    <i class="bi bi-lock-fill icon-left"></i>
+                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+
+                                <div class="social-text d-flex justify-content-center align-items-center">
+                                    <div class="dividing-line"></div>
+                                    <p>Hoặc</p>
+                                    <div class="dividing-line"></div>
+                                    
+                                </div>
+                                <div class="social-media d-flex justify-content-center align-items-center">
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-google"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-apple"></i>
+                                    </a>
+                                </div>
+                            </form>
+
+                            <form action="#" class="sign-up-form">
+                                <h2 class="title text-center">Chào mừng <br> thành viên mới !</h2>
+
+                                <div class="form-group w-100">
+                                    <input type="email" class="form-control" id="emailSignUp" required>
+                                    <label for="emailSignUp">Địa chỉ Email</label>
+                                    <i class="bi bi-envelope-fill icon-left"></i>
+                                </div>
+
+                                <div class="form-group w-100">                                  
+                                    <input type="password" class="form-control" id="passwordSignUp" required>
+                                    <label for="passwordSignUp">Mật khẩu</label>  
+                                    <i class="bi bi-lock-fill icon-left"></i>
+                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                </div>
+
+                                <div class="form-group w-100">                                  
+                                    <input type="password" class="form-control" id="confirmPasswordSignUp" required>
+                                    <label for="confirmPasswordSignUp">Xác nhận mật khẩu</label>  
+                                    <i class="bi bi-lock-fill icon-left"></i>
+                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Đăng ký</button>
+
+                                <div class="social-text d-flex justify-content-center align-items-center">
+                                    <div class="dividing-line"></div>
+                                    <p>Hoặc</p>
+                                    <div class="dividing-line"></div>
+                                    
+                                </div>
+                                <div class="social-media d-flex justify-content-center align-items-center">
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-google"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="bi bi-apple"></i>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                
+                        <div class="panels-container">
+                            <div class="panel left-panel">
+                                <div class="content">
+                                <h3>Bạn chưa có tài khoản ?</h3>
+                                <p>
+                                    Đăng ký thành viên ngay để nhận <span>Voucher</span>, <span>Thông tin khuyến mãi</span> và <span>Thanh toán online</span> khi mua hàng!
+                                </p>
+                                <button class="btn transparent" id="sign-up-btn">
+                                    Đăng ký
+                                </button>
+                                </div>
+                                <img src="/assets/images/adidas-shoes.png" class="image" alt="" />
+                            </div>
+                            <div class="panel right-panel">
+                                <div class="content">
+                                <h3>Bạn là thành viên ?</h3>
+                                <p>
+                                    Đăng nhập ngay để sử dụng <span>Voucher</span> và các <span>Ưu đãi</span> cho thành viên !
+                                </p>
+                                <button class="btn transparent" id="sign-in-btn">
+                                    Đăng nhập
+                                </button>
+                                </div>
+                                <img src="/assets/images/background/alpha_3.png" class="image" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal shopping bag -->
+        <div class="modal fade shopping-bag" id="modalShoppingBag" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bag-content">
+                    <div class="bag-header d-flex justify-content-between">
+                        <div class="bag-header-logo d-flex">
+                            <img src="/assets/icons/logo-shoe.png" alt="">
+                            <div class="logo-text">
+                                <h2 class="shop-name">SneakerPlug</h2>
+                                <div class="slogan">
+                                    <p>Mỗi bước nhỏ</p>
+                                    <span>đều dẫn tới thành công</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </div>
+                    <div class="bag-body">
+                        <h2 class="bag-title" id="bagTitle">Your <span>Shopping Bag</span></h2>
+                        <div class="bag-tab">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Sản phẩm <br><span>Product</span></th>
+                                        <th scope="col">Tên<br><span>Name</span></th>
+                                        <th scope="col">Kích cỡ<br><span>Size</span></th>
+                                        <th scope="col">Số lượng<br><span>Quantility</span></th>
+                                        <th scope="col">Giá<br><span>Price</span></th>
+                                        <th scope="col">Xoá<br><span>Remove</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
+                                        </th>
+                                        <td>Red Nike Jordan Max Aura 1</td>
+                                        <td class="product-size">38</td>
+                                        <td class="product-quantity">
+                                            <button class="btn-reduction">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            <span>1</span>
+                                            <button class="btn-increase">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </td>
+                                        <td class="product-price">760.000</td>
+                                        <td><button class="btn-remove"><i class="bi bi-trash3"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
+                                        </th>
+                                        <td>Red Nike Jordan Max Aura 2</td>
+                                        <td class="product-size">44</td>
+                                        <td class="product-quantity">
+                                            <button class="btn-reduction">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            <span>1</span>
+                                            <button class="btn-increase">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </td>
+                                        <td class="product-price">760.000</td>
+                                        <td><button class="btn-remove"><i class="bi bi-trash3"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
+                                        </th>
+                                        <td>Red Nike Jordan Max Aura 3</td>
+                                        <td class="product-size">41</td>
+                                        <td class="product-quantity">
+                                            <button class="btn-reduction">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            <span>1</span>
+                                            <button class="btn-increase">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </td>
+                                        <td class="product-price">760.000</td>
+                                        <td><button class="btn-remove"><i class="bi bi-trash3"></i></button></td>
+                                    </tr>
+                                    <tr class="price-total">
+                                        
+                                        <td colspan="4" class="price-total-title">Tổng thanh toán</td>
+                                        <td colspan="2" class="price-total-number text-left">2.280.000<span>đ</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bag-footer d-flex justify-content-between align-items-center flex-sm-row flex-column">
+                        <div class="payment ">
+                            <div class="list-card d-flex align-items-center justify-content-between">
+                                <a href="">
+                                    <img src="/assets/icons/payment/mastercard.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/icons/payment/visa.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/icons/payment/americanexpress.png" alt="">
+                                </a>
+                            </div>
+                            <p class="text">
+                                * lựa chọn phương thức thanh toán
+                            </p>
+                        </div>
+                        <div class="btn-action">
+                            <button type="button" class="btn btn-primary">Thanh toán <br><span>Check out</span></button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
     
     <main>
         <div class="container-fluid">
@@ -59,7 +514,7 @@
                         </div>
                         <div class="filter-by-price filter-item col-lg-12 col-md-4 col-sm-12 col-12">
                             <div class="filter-title d-flex mb-4">
-                                <h5>Tìm sp theo giá</h5>
+                                <h5>Tìm sp theo giá <span>(đơn vị triệu đồng)</span></h5>
                             </div>
                             <div class="filter-content range-slider container">
                                 <span class="output outputOne"></span>
@@ -105,7 +560,10 @@
                     <div class="grid-container mb-4 mt-4">
                         
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="new-product-banner">
+                                <p>new</p>
+                                <img src="/assets/icons/new-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -113,31 +571,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
-                            
+                                                           
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-
-                            
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="new-product-banner">
+                                <p>new</p>
+                                <img src="/assets/icons/new-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -145,94 +609,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">New</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">New</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
+                                                           
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                            
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="hot-product-banner">
+                                <p>hot</p>
+                                <img src="/assets/icons/hot-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -240,29 +647,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                        
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="discount-product-banner">
+                                <p>20%</p>
+                                <img src="/assets/icons/size-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -270,29 +685,40 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-            
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
+                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="price-sale">
+                                        <h4 class="price-cost">950.000<span>đ</span></h4>
+                                        <h4 class="price-item">760.000<span>đ</span></h4>
+                                    </div>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                        
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="hot-product-banner">
+                                <p>hot</p>
+                                <img src="/assets/icons/hot-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -300,28 +726,75 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
+                                                      
+                            <div class="item-info">
+                                <div class="image-item">
+                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
+                                    <div class="shadow"></div>
+                                </div>
+                                
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
+                                    <button class="btn-details">
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
+                                    </button>
+                                    <button class="btn-add-cart">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="grid-item">
+                            <div class="new-product-banner">
+                                <p>new</p>
+                                <img src="/assets/icons/new-tag.png" alt="">
+                            </div>
+                            
+                            <div class="add-favorites-list">
+                                <input type="checkbox" name="" id="">
+                                <i class="bi bi-heart-fill">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </i>
+                            </div>
+                                                           
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
-                            </div>                               
+                            </div>
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">New</div>
+                            <div class="hot-product-banner">
+                                <p>hot</p>
+                                <img src="/assets/icons/hot-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -329,28 +802,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                                                        
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                        </div>              
+                        </div>
+
                         <div class="grid-item">
-                            <div class="banner">Hot</div>
+                            <div class="discount-product-banner">
+                                <p>20%</p>
+                                <img src="/assets/icons/size-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -358,31 +840,78 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
+                                                      
+                            <div class="item-info">
+                                <div class="image-item">
+                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
+                                    <div class="shadow"></div>
+                                </div>
+                                
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="price-sale">
+                                        <h4 class="price-cost">950.000<span>đ</span></h4>
+                                        <h4 class="price-item">760.000<span>đ</span></h4>
+                                    </div>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
+                                    <button class="btn-details">
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
+                                    </button>
+                                    <button class="btn-add-cart">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <div class="new-product-banner">
+                                <p>new</p>
+                                <img src="/assets/icons/new-tag.png" alt="">
+                            </div>
                             
-                            
+                            <div class="add-favorites-list">
+                                <input type="checkbox" name="" id="">
+                                <i class="bi bi-heart-fill">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </i>
+                            </div>
+                                                           
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-
-                            
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">Hot</div>
+                            <div class="hot-product-banner">
+                                <p>hot</p>
+                                <img src="/assets/icons/hot-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -390,31 +919,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
-                            
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-
-                            
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">Hot</div>
+                            <div class="new-product-banner">
+                                <p>new</p>
+                                <img src="/assets/icons/new-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -422,62 +957,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Hot</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
+                                                           
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                            
                         </div>
+
                         <div class="grid-item">
-                            <div class="banner">Hot</div>
+                            <div class="hot-product-banner">
+                                <p>hot</p>
+                                <img src="/assets/icons/hot-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -485,88 +995,37 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                            
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="price-item">750.000<span>đ</span></h4>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                        
                         </div>
-                        <div class="grid-item">
-                            <div class="banner">Hot</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Hot</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
 
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>                               
-                        </div>
                         <div class="grid-item">
-                            <div class="banner">Hot</div>
+                            <div class="discount-product-banner">
+                                <p>20%</p>
+                                <img src="/assets/icons/size-tag.png" alt="">
+                            </div>
                             
                             <div class="add-favorites-list">
                                 <input type="checkbox" name="" id="">
@@ -574,271 +1033,35 @@
                                     <i class="bi bi-plus-circle-fill"></i>
                                 </i>
                             </div>
-                                                        
+                                                      
                             <div class="item-info">
                                 <div class="image-item">
                                     <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
                                     <div class="shadow"></div>
                                 </div>
                                 
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
+                                <h2 class="name-item">Nike Jordan Max Aura 3</h2>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="price-sale">
+                                        <h4 class="price-cost">950.000<span>đ</span></h4>
+                                        <h4 class="price-item">760.000<span>đ</span></h4>
+                                    </div>
+                                    <div class="star">
+                                        4
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="action-item">
                                     <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
+                                        <a href="/view/web/product-details.html">Chi tiết</a>
                                     </button>
                                     <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
+                                        Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
-                        </div>              
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
+                        </div>
 
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-            
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe3-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe1-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>                               
-                        </div>
-                        <div class="grid-item">
-                            <div class="banner">Sale</div>
-                            
-                            <div class="add-favorites-list">
-                                <input type="checkbox" name="" id="">
-                                <i class="bi bi-heart-fill">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </i>
-                            </div>
-                                                        
-                            <div class="item-info">
-                                <div class="image-item">
-                                    <img src="/assets/images/products/showcase/shoe2-1/img1.png" alt="">
-                                    <div class="shadow"></div>
-                                </div>
-                                
-                                <h2 class="name-item">Red Nike Jordan Max Aura 3</h2>
-                                <h4 class="price-item">$ <span>150</span></h4>
-                                <div class="action-item d-flex justify-content-center align-items-center justify-content-between">
-                                    <button class="btn-details">
-                                        <a href="/view/web/product-details.html">Details</a>
-                                    </button>
-                                    <button class="btn-add-cart">
-                                        <i class="bi bi-cart4"></i>
-                                        Add Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="pagination justify-content-center">
                         <a href="#">&laquo;</a>
@@ -846,8 +1069,6 @@
                         <a href="#">2</a>
                         <a href="#">3</a>
                         <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
                         <a href="#">...</a>
                         <a href="#">20</a>
                         <a href="#">&raquo;</a>
@@ -859,11 +1080,106 @@
         </div>
     </main>
 
+    <footer class="footer-area d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            
+
+            <div class="footer-logo d-flex justify-content-center align-items-center">
+                <img src="/assets/icons/logo-shoe.png" alt="">
+                <div class="logo-text">
+                    <h2 class="shop-name">SneakerPlug</h2>
+                    <p class="slogan">Mỗi bước nhỏ đều dẫn tới thành công</p>
+                </div>
+            </div>
+            <div class="w-100 d-flex justify-content-center mb-3">
+                <img style="width: 60%;" src="/assets/images/Vector.png" alt="">
+            </div>
+            <section class="subscribe-area mb-5">
+                
+                <div class="subscribe d-flex justify-content-center align-items-center row">
+                    <div class="subscribe-title d-flex justify-content-start align-items-start flex-column col-lg-5">
+                        <h5 class="mb-3">Đăng ký ngay !!!</h5>
+                        <p> ...để nhận <span>Voucher</span> và <span>thông tin khuyến mãi</span> từ chúng tôi</p>
+                    </div>
+                    <form  action="" class="col-lg-7">
+                        <div class="form-group d-flex align-items-center">
+                            <input type="text" class="form-control" id="subscribeEmail" placeholder="Nhập Email của bạn">
+                            <button type="submit" class=" btn btn-subscribe ">Đăng ký</button>                          
+                        </div>  
+                    </form>
+                </div>              
+            </section>
+            <div class="footer-content row">
+                <div class="single-footer col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h4>Giới thiệu</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo corrupti, fuga quia laudantium dolorem .</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-opening-hours single-footer col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h4>Giờ mở cửa</h4>
+                    <ul>
+                        <li><i class="bi bi-clock"></i> Monday - Saturday: <span>9.00 - 21.00</span></li>        
+                        <li><i class="bi bi-clock"></i> Sunday : <span>9.00 - 19.00</span></li>
+                    </ul>
+                </div>
+                <div class="footer-links single-footer col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h4>Link nhanh</h4>
+                    <ul>
+                        <li><a href="/view/web/index.html"><i class="link-icon bi bi-arrow-right"></i>Home</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>About</a></li>
+                        <li><a href="/view/web/all-product.html"><i class="link-icon bi bi-arrow-right"></i>Product</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Blog</a></li>
+                        <li><a href="/view/web/contact.html"><i class="link-icon bi bi-arrow-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class=" footer-contact single-footer col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li>
+                            <div class="agency-1">
+                                <p>- Chi nhánh 1</p>
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i>44 Bạch Đằng, p.22, Bình Thạnh</li>
+                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
+                                </ul>
+                            </div>
+                            <div class="agency-2">
+                                <p>- Chi nhánh 2</p>
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i>20/30 Trần Não, P.An Phú, Tp.Thủ Đức</li>
+                                    <li><i class="bi bi-telephone"></i></i>+613 4589 1207</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><i class="bi bi-envelope"></i> info@sneakerplug.com</li>
+                        <li><i class="bi bi-globe-americas"></i> www.sneakerplug.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area mb-4">
+            <div class="container">
+                <div class="footer-bottom">                    
+                    <p class="d-flex justify-content-center align-items-center flex-wrap"> 2022 all rights reserved.<span><a href="">Privacy policy</a></span><span><a href="">Terms & conditions</a></span><span><a href="">Disclaimer</a></span>  </p>
+                                     
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/javascript/btn-back-top.js"></script>
+    <script src="/javascript/sign-form.js"></script>
+    <script src="/javascript/slider-header.js"></script>
+    <script src="/javascript/main-menu.js"></script>
     <script src="/javascript/filter-price-range.js"></script>
 </body>
 </html>

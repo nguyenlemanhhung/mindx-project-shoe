@@ -123,9 +123,7 @@
 }
 #modalSignInUp .social-text {
     width: 100%;
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #000;
+    margin: 20px 0;
 }
 #modalSignInUp .social-text .dividing-line{
     height: 1px;
@@ -134,36 +132,80 @@
 }
 #modalSignInUp .social-text p {
     color: #FFa109;
-    margin: 0 10px;
+    margin: 0 20px;
 }
-#modalSignInUp .social-media {
-    margin: 10px 0;
+#modalSignInUp .signin-signup .social-media {
+  
 }
-#modalSignInUp .social-icon {
-  height: 45px;
-  width: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  color: #333;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  transition: all 0.2s ease;
-}
-#modalSignInUp .social-icon:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#modalSignInUp .social-icon:hover i {
+#modalSignInUp .signin-signup .social-media .social-icon i {
   font-size: 30px;
-  color: #04befe;
+  color: #fff;
 }
-#modalSignInUp .social-icon:hover {
-    color: #4481eb;
-    border-color: #4481eb;
+#modalSignInUp .signin-signup .social-media .social-media-item {
+  position: relative;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  line-height: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(0, 123, 255, 0.5)
+}
+#modalSignInUp .social-media .social-media-item:hover {
+  background-color: #fff;
+}
+#modalSignInUp .signin-signup .social-media .social-media-item .sub-text {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 15px 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  left: 50%;
+  transform: translateX(-50%);
+}
+#modalSignInUp .signin-signup .social-media .social-media-item .sub-text::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  bottom: -5px;
+}
+
+#modalSignInUp .signin-signup .social-media .link-facebook .sub-text,
+#modalSignInUp .signin-signup .social-media .link-facebook .sub-text::after {
+  background-color: #007bff;
+}
+
+#modalSignInUp .social-media .link-facebook:hover i {
+  color: #007bff;
+}
+#modalSignInUp .signin-signup .social-media .link-google .sub-text,
+#modalSignInUp .signin-signup .social-media .link-google .sub-text::after {
+  background-color: rgba(34,193,195,1);
+}
+
+#modalSignInUp .social-media .link-google:hover i {
+  color: rgba(34,193,195,1);
+}
+#modalSignInUp .signin-signup .social-media .link-apple .sub-text,
+#modalSignInUp .signin-signup .social-media .link-apple .sub-text::after {
+  background-color: #acacac;
+}
+#modalSignInUp .social-media .link-apple:hover i {
+  color: #acacac;
+}
+
+#modalSignInUp .social-media .social-media-item:hover span.sub-text {
+  opacity: 1;
+  top: -110%;
 }
   
 #modalSignInUp .btn {

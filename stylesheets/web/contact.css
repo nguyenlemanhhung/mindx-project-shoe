@@ -2,13 +2,13 @@
     background-color: #f0f2f5;
 }
 #contact-page main {
-    margin: 50px 0;
+    margin-top: 50px;
 }
 .contact-main .contact-info .info-title {
     margin-bottom: 20px;
 }
 .contact-main .contact-info .info-title h6 {
-    color: #000;
+    color: #5aaad1;
     font-size: 14px;
     
 }
