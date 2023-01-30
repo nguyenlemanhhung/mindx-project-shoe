@@ -25,6 +25,13 @@ function checkData(){
         if (passwordSignIn == getPassword) {
             alert ("dang nhap thanh cong")
             localStorage.setItem('login_success', true)
+            
+            // document.getElementById('home-page').classList.remove('modal-open');
+            // document.getElementById('modalSignInUp').classList.remove('show');
+            
+            document.getElementById('has-user').style.display = 'block';
+            document.getElementById('no-user').style.display = 'none';
+            document.location.reload();
         }else {
             alert("sai mat khau")
             localStorage.setItem('login_success', false)

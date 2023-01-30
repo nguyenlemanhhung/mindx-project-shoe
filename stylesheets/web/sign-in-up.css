@@ -96,6 +96,11 @@
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
+    background: none;
+    border: none;
+}
+#modalSignInUp .form-group button:focus {
+    outline: none;
 }
 #modalSignInUp .form-group i {
     font-size: 20px;
@@ -104,10 +109,7 @@
 #modalSignInUp .form-group .icon-right:hover {
     color: #FFa109;
 }
-#modalSignInUp .form-group button {
-    background: none;
-    border: none;
-}
+
 #modalSignInUp .form-group input:focus {
     box-shadow: none;
     border: 1px solid #04befe;
@@ -133,9 +135,6 @@
 #modalSignInUp .social-text p {
     color: #FFa109;
     margin: 0 20px;
-}
-#modalSignInUp .signin-signup .social-media {
-  
 }
 #modalSignInUp .signin-signup .social-media .social-icon i {
   font-size: 25px;
@@ -269,7 +268,7 @@
 }
   
 #modalSignInUp .image {
-    width: 100%;
+    width: 500px;
     transition: transform 1.1s ease-in-out;
     transition-delay: 0.4s;
 }
@@ -307,7 +306,7 @@
   
 #modalSignInUp .panel p {
     font-size: 15px;
-    padding: 0.7rem 0;
+    margin: 20px 0;
 }
 #modalSignInUp .panel p span {
   color: #FFa109;
@@ -408,13 +407,12 @@
   }
 
   #modalSignInUp .image {
-    width: 200px;
+    width: 300px;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
   }
 
   #modalSignInUp .panel .content {
-    padding-right: 15%;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.8s;
   }

@@ -4,6 +4,7 @@ main .all-product-content {
 
 main .all-product-content .product-filter {
     padding: 20px;
+    margin-top: 20px;
     height: min-content;
     min-height:auto ;
     overflow: auto;

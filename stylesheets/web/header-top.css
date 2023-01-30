@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Merriweather:wght@300;400;700;900&family=Notable&family=Poppins:wght@100;200;300;400;500;600;700;900&family=Sirin+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
 header {
     background-image: url(/assets/images/background/bg-header.png);
     background-size: cover;
@@ -237,6 +239,7 @@ header {
     background: none;
     outline: none;
     border: 1px solid #FFa109;
+    background-color: rgba(255, 161, 9, 0.2);
 }
 .header-container .header-content .go-main-products a {
     color: #FFa109;
@@ -264,8 +267,11 @@ header {
     width: 55%;
 }
 .header-container .header-content .product-detail .product-title {
-    font-family: 'Notable', sans-serif;
     text-transform: uppercase;
+    font-family: 'Bungee Shade', cursive;
+    color: #c8d3e6;
+    font-size: 55px;
+    line-height: 1.5;
 }
 .header-container .header-content .product-detail .product-des {
     color: #c8d3e6;

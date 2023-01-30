@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Notable&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px !important;
@@ -330,6 +332,13 @@ ul {
   }
 }
 @media only screen and (max-width: 767.98px) {
+  #btnBackTop {
+    width: 40px;
+    height: 40px;
+  }
+  #btnBackTop i {
+    font-size: 25px;
+  }
   main .main-product .showcase-product .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

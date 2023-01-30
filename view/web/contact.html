@@ -46,29 +46,29 @@
                         <ul class="nav-items">
                             <li class="nav-item">
                                 <a href="/view/web/index.html" class="nav-link">
-                                    <span>Home</span>
+                                    <span>Trang chủ</span>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link">
-                                    <span>Products</span>
+                                    <span>Sản phẩm</span>
                                 </a>
                                 <div class="submenu">
                                     <ul class="submenu-items d-flex">
                                         <li class="submenu-item">
                                             <a href="#" class="submenu-link font-weight-bold">
-                                                <span>Men's Shoes</span>
+                                                <span>Giày nam</span>
                                             </a>
                                             <nav class="child-submenu">
                                                 <ul class="child-submenu-items">
                                                     <li class="child-submenu-item">
                                                         <a href="" class="child-submenu-link">
-                                                            <span>Sport Shoes</span>
+                                                            <span>Giày thể thao</span>
                                                         </a>
                                                     </li>
                                                     <li class="child-submenu-item">
                                                         <a href="" class="child-submenu-link">
-                                                            <span>Southwest shoes</span>
+                                                            <span>Giày da</span>
                                                         </a>
                                                     </li>
                                                     <li class="child-submenu-item">
@@ -82,18 +82,18 @@
                                         <div class="vertical-line"></div>
                                         <li class="submenu-item">
                                             <a href="#" class="submenu-link font-weight-bold">
-                                                <span>Women's Shoes</span>
+                                                <span>Giày nữ</span>
                                             </a>
                                             <nav class="child-submenu">
                                                 <ul class="child-submenu-items">
                                                     <li class="child-submenu-item">
                                                         <a href="" class="child-submenu-link">
-                                                            <span>Sport Shoes</span>
+                                                            <span>Giày thể thao</span>
                                                         </a>
                                                     </li>
                                                     <li class="child-submenu-item">
                                                         <a href="" class="child-submenu-link">
-                                                            <span>Southwest shoes</span>
+                                                            <span>Giày cao gót</span>
                                                         </a>
                                                     </li>
                                                     <li class="child-submenu-item">
@@ -110,12 +110,12 @@
                             
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <span>Blog</span>
+                                    <span>Tin tức</span>
                                 </a>
                             </li> 
                             <li class="nav-item">
                                 <a href="/view/web/contact.html" class="nav-link">
-                                    <span>Contact</span>
+                                    <span>Liên hệ</span>
                                 </a>
                             </li>
                             
@@ -141,16 +141,16 @@
                     </button>
                     
                     <div class="header-profile">
-                        <div class="no-user">
+                        <div class="no-user" id="no-user">
                             <button type="button" class="btn-sign-in" data-toggle="modal" data-target="#modalSignInUp">
-                                Sign In
+                                Đăng nhập
                             </button>
                             <button type="button" class="btn-sign-up" data-toggle="modal" data-target="#modalSignInUp">
-                                Sign Up
+                                Đăng ký
                             </button>
                         </div>
                         
-                        <!-- <div class="has-user">
+                        <div class="has-user" id="has-user">
                             <div class="user-avt" onclick="this.classList.toggle('open-setting')">
                                 <img src="/assets/images/avt/avt-1.jpeg" alt="">
                             </div>
@@ -168,7 +168,7 @@
                                             <span>Favorites List</span>
                                         </a>
                                     </li>
-                                    <li class="logout">
+                                    <li class="logout" onclick="userLogOut()">
                                         <a class="logout-link" href="">
                                             <i class="bi bi-box-arrow-right"></i>
                                             <span>Log Out</span>
@@ -176,7 +176,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div> -->
+                        </div>
 
                     </div>
                 </div>
@@ -205,14 +205,23 @@
                         </div>
                     </div>
                     <div class="sm-product">
-                    <div class="sm-product-img-container">
-                        <img src="/assets/images/slider-header/sm-img-1.jpeg" class="sm-product-img" alt="">
-                    </div>
+                        <div class="sm-product-img-container">
+                            <img src="/assets/images/slider-header/sm-img-1.jpeg" class="sm-product-img" alt="">
+                        </div>
                     </div>
                     <div class="social-link d-flex justify-content-center align-items-center">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <div class="social-link-item link-facebook">
+                            <span class="sub-text">Facebook</span>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="social-link-item link-twitter">
+                            <span class="sub-text">Twitter</span>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="social-link-item link-linkedin">
+                            <span class="sub-text">Linkedin</span>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>                    
                     </div>
                 </div>
 
@@ -220,16 +229,22 @@
                     <img src="/assets/images/slider-header/img-1.jpeg" class="backdrop-img" alt="">
                     <div class="content">
                         <div class="product-detail mr-2">
-                            <h1 class="product-title mb-5">Điểm nhấn cho phong cách</h1>
-                            <p class="product-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <h1 class="product-title mb-5">Điểm nhấn phong cách</h1>
+                            <p class="product-des mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <div class="btn-action d-flex justify-content-between align-items-center">
+                                <button class="go-main-products">
+                                    <a href="#main-product">Khám phá ngay</a>
+                                </button>
+                                <button class="next-btn">
+                                    <img src="/assets/icons/next.png" alt="">
+                                </button>
+                            </div>
                             
                         </div>
                         <div class="product-img-container">
                             <img src="/assets/images/slider-header/img-1.jpeg" class="product-img" alt="">
                         </div>
-                        <button class="next-btn">
-                            <img src="/assets/icons/next.png" alt="">
-                        </button>
+                        
                     </div>
                 </div>
                 
@@ -259,10 +274,10 @@
                                     <input type="password" class="form-control" id="passwordSignIn" required>
                                     <label for="passwordSignIn">Mật khẩu</label>  
                                     <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signin"></i></button>                              
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                                <button type="submit" class="btn btn-primary" onclick="checkData()">Đăng Nhập</button>
 
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
@@ -271,16 +286,25 @@
                                     
                                 </div>
                                 <div class="social-media d-flex justify-content-center align-items-center">
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-facebook"></i>
-                                    </a>
+                                    <div class="social-media-item link-facebook">
+                                        <span class="sub-text">Facebook</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </div>
+                                    <div class="social-media-item link-google">
+                                        <span class="sub-text">Google</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-google"></i>
+                                        </a>
+                                    </div>
+                                    <div class="social-media-item link-apple">
+                                        <span class="sub-text">Apple</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </a>
+                                    </div> 
                                     
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-google"></i>
-                                    </a>
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-apple"></i>
-                                    </a>
                                 </div>
                             </form>
 
@@ -297,17 +321,17 @@
                                     <input type="password" class="form-control" id="passwordSignUp" required>
                                     <label for="passwordSignUp">Mật khẩu</label>  
                                     <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signup"></i></button>                              
                                 </div>
 
                                 <div class="form-group w-100">                                  
                                     <input type="password" class="form-control" id="confirmPasswordSignUp" required>
                                     <label for="confirmPasswordSignUp">Xác nhận mật khẩu</label>  
                                     <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
+                                    <!-- <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                               -->
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Đăng ký</button>
+                                <button type="submit" class="btn btn-primary" onclick="addData()">Đăng ký</button>
 
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
@@ -316,16 +340,25 @@
                                     
                                 </div>
                                 <div class="social-media d-flex justify-content-center align-items-center">
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-facebook"></i>
-                                    </a>
+                                    <div class="social-media-item link-facebook">
+                                        <span class="sub-text">Facebook</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="social-media-item link-google">
+                                        <span class="sub-text">Google</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="bi bi-google"></i>
+                                        </a>
+                                    </div>
+                                    <div class="social-media-item link-apple">
+                                        <span class="sub-text">Apple</span>
+                                        <a href="#" class="social-icon">
+                                            <i class="bi bi-apple"></i>
+                                        </a>
+                                    </div> 
                                     
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-google"></i>
-                                    </a>
-                                    <a href="#" class="social-icon">
-                                        <i class="bi bi-apple"></i>
-                                    </a>
                                 </div>
                             </form>
                         </div>
@@ -612,17 +645,17 @@
                 <div class="footer-opening-hours single-footer col-lg-3 col-md-6 col-sm-6 col-12">
                     <h4>Giờ mở cửa</h4>
                     <ul>
-                        <li><i class="bi bi-clock"></i> Monday - Saturday: <span>9.00 - 21.00</span></li>        
-                        <li><i class="bi bi-clock"></i> Sunday : <span>9.00 - 19.00</span></li>
+                        <li><i class="bi bi-clock"></i>Thứ 2 - Thứ 7 : <span>9.00 - 21.00</span></li>        
+                        <li><i class="bi bi-clock"></i>Chủ nhật : <span>9.00 - 19.00</span></li>
                     </ul>
                 </div>
                 <div class="footer-links single-footer col-lg-3 col-md-6 col-sm-6 col-12">
                     <h4>Link nhanh</h4>
                     <ul>
-                        <li><a href="/view/web/index.html"><i class="link-icon bi bi-arrow-right"></i>Home</a></li>
-                        <li><a href="/view/web/all-product.html"><i class="link-icon bi bi-arrow-right"></i>Product</a></li>
-                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Blog</a></li>
-                        <li><a href="/view/web/contact.html"><i class="link-icon bi bi-arrow-right"></i>Contact</a></li>
+                        <li><a href="/view/web/index.html"><i class="link-icon bi bi-arrow-right"></i>Trang chủ</a></li>
+                        <li><a href="/view/web/all-product.html"><i class="link-icon bi bi-arrow-right"></i>Sản phẩm</a></li>
+                        <li><a href=""><i class="link-icon bi bi-arrow-right"></i>Tin tức</a></li>
+                        <li><a href="/view/web/contact.html"><i class="link-icon bi bi-arrow-right"></i>Liên hệ</a></li>
                     </ul>
                 </div>
                 
@@ -668,6 +701,8 @@
     <script src="/javascript/sign-form.js"></script>
     <script src="/javascript/slider-header.js"></script>
     <script src="/javascript/main-menu.js"></script>
+    <script src="/javascript/auth.js"></script>
+    <script src="/javascript/show-password.js"></script>
 
 </body>
 

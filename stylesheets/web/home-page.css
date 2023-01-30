@@ -47,6 +47,8 @@ main .main-product .hot-product .title h1,
 main .main-product .discount-product .title h1{
   color: rgba(90, 170, 209, 0.3);
   font-size: 90px;
+  font-family: 'Rubik Vinyl', cursive;
+  letter-spacing: 5px;
 }
 main .main-product .new-product .title h4,
 main .main-product .hot-product .title h4,
@@ -58,6 +60,7 @@ main .main-product .discount-product .title h4{
   transform: translateY(-50%);
   background-color: rgba(255,255,255,0.5);
   padding: 5px;
+  
 }
 
 
@@ -113,8 +116,10 @@ main .main-product .btn-product a:hover {
   position: relative;
 }
 .customer-feedback .title h1{
+  font-family: 'Rubik Vinyl', cursive;
   color: rgba(90, 170, 209, 0.3);
   font-size: 90px;
+  letter-spacing: 5px;
 }
 .customer-feedback .title h4{
   width: max-content;
