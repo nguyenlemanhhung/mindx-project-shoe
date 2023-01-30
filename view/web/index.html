@@ -142,7 +142,7 @@
                     </button>
                     
                     <div class="header-profile">
-                        <div class="no-user">
+                        <div class="no-user" id="no-user">
                             <button type="button" class="btn-sign-in" data-toggle="modal" data-target="#modalSignInUp">
                                 Sign In
                             </button>
@@ -151,7 +151,7 @@
                             </button>
                         </div>
                         
-                        <!-- <div class="has-user">
+                        <div class="has-user" id="has-user">
                             <div class="user-avt" onclick="this.classList.toggle('open-setting')">
                                 <img src="/assets/images/avt/avt-1.jpeg" alt="">
                             </div>
@@ -169,7 +169,7 @@
                                             <span>Favorites List</span>
                                         </a>
                                     </li>
-                                    <li class="logout">
+                                    <li class="logout" onclick="userLogOut()">
                                         <a class="logout-link" href="">
                                             <i class="bi bi-box-arrow-right"></i>
                                             <span>Log Out</span>
@@ -177,7 +177,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div> -->
+                        </div>
 
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                                     <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                                <button type="submit" class="btn btn-primary" onclick="checkData()">Đăng Nhập</button>
 
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
@@ -332,7 +332,7 @@
                                     <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                              
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Đăng ký</button>
+                                <button type="submit" class="btn btn-primary" onclick="addData()">Đăng ký</button>
 
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
@@ -1774,5 +1774,6 @@
     <script src="/javascript/sign-form.js"></script>
     <script src="/javascript/slider-header.js"></script>
     <script src="/javascript/main-menu.js"></script>
+    <script src="/javascript/auth.js"></script>
 </body>
 </html>

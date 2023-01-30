@@ -578,6 +578,7 @@ header {
 /*<======== Profile =======>*/
 
 /* no user */
+
 .header-top .header-profile .no-user .btn-sign-in {
     padding: 8px 15px;
     border: 1px solid #6fa6d4;
@@ -604,6 +605,7 @@ header {
 
 /* has user */
 .header-top .has-user {
+    
     position: relative;
 }
 .header-top .has-user .user-avt {
