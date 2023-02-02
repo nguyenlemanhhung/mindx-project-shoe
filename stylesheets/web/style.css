@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px !important;
@@ -30,6 +33,11 @@ a:hover {
 ul {
     list-style: none;
 }
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 
 .chat-online {
   position: fixed;
@@ -108,11 +116,13 @@ ul {
     outline: none;
     background-color: rgb(255,161,9);
     color: #fff;
-    display: none;
+    /* display: none; */
     align-items: center;
     justify-content: center;
     z-index: 99;
+    
 }
+ 
 #btnBackTop i {
     font-size: 30px;
 }

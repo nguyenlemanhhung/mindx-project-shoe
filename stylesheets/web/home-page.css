@@ -13,6 +13,7 @@ main .ps-features {
 }
 main .ps-features .ps-container .ps-box {
   padding: 20px 10px;
+  border-radius: 10px;
 }
 main .ps-features .ps-container .ps-box img {
   width: 50px;

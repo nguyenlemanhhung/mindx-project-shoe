@@ -1,11 +1,30 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
+// switch form
+
+const signInSwitch = document.querySelector("#sign-in-switch");
+const signUpSwitch = document.querySelector("#sign-up-switch");
 const wrapper = document.querySelector(".wrapper");
 
-sign_up_btn.addEventListener("click", () => {
+const signInHeader = document.querySelector('.sign-in-header');
+const signUpHeader = document.querySelector('.sign-up-header');
+
+
+signInSwitch.addEventListener("click", () => {
+  wrapper.classList.remove("sign-up-mode");
+  console.log("click")
+});
+
+signUpSwitch.addEventListener("click", () => {
+  wrapper.classList.add("sign-up-mode");
+  console.log("click1")
+
+});
+
+// show form
+
+signUpHeader.addEventListener("click", () => {
   wrapper.classList.add("sign-up-mode");
 });
 
-sign_in_btn.addEventListener("click", () => {
+signInHeader.addEventListener("click", () => {
   wrapper.classList.remove("sign-up-mode");
 });

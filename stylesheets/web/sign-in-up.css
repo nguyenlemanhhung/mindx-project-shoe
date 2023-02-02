@@ -2,7 +2,7 @@
     background-image: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
 }
 #modalSignInUp .modal-dialog {
-  max-width: 90%;
+  max-width: 95%;
 }
 #modalSignInUp .wrapper {
     position: relative;
@@ -48,7 +48,9 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
-  
+#modalSignInUp form input:-internal-autofill-selected {
+  background: none !important;
+}
 #modalSignInUp form.sign-up-form {
     opacity: 0;
     z-index: 1;
@@ -57,16 +59,23 @@
 #modalSignInUp form.sign-in-form {
     z-index: 2;
 }
-  
+
 #modalSignInUp .title {
     font-size: 36px;
     color: #444;
     margin-bottom: 30px;
 }
 #modalSignInUp .form-group {
-    margin-bottom: 30px;
+    /* margin-bottom: 20px; */
     position: relative;
 }
+#modalSignInUp .form-group.success {
+  margin-bottom: 20px;
+}
+#modalSignInUp .form-group.error {
+  margin-bottom: 40px;
+}
+
 #modalSignInUp .form-group label {
     margin-left: 20px;
     color: #444444;
@@ -82,7 +91,7 @@
 #modalSignInUp .form-group input {
     border: 1px solid #acacac;
     border-radius: 10px;
-    padding: 30px 35px;
+    padding: 25px 35px;
     outline: none;
 }
 #modalSignInUp .form-group .icon-left {
@@ -225,23 +234,58 @@
   top: -110%;
 }
   
-#modalSignInUp .btn {
-    width: 150px;
-    background-color: #5995fd;
-    border: none;
-    outline: none;
-    height: 49px;
-    border-radius: 49px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: 0.5s;
+#modalSignInUp form .btn {
+  padding: 15px 30px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 14px ;
 }
   
-#modalSignInUp .btn:hover {
+#modalSignInUp form .btn:hover {
     background-color: #4d84e2;
+}
+#modalSignInUp form .form-action .remember-login label{
+  color: #6fa6d4;
+  margin: 0;
+}
+#modalSignInUp form .form-action .forgot-password {
+  text-align: end;
+  padding: 5px 10px;
+  position: relative;
+  overflow: hidden;
+}
+#modalSignInUp form .form-action .forgot-password::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  border-top-right-radius: 200% 100%;
+  border-bottom-right-radius: 200% 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #04befe;
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+#modalSignInUp form .form-action .forgot-password:hover::before {
+  width: 100%;
+  border-radius: 0;
+}
+#modalSignInUp form .form-action .forgot-password a {
+  color: #FFa109;
+  transition: all 1s ease;
+  
+}
+#modalSignInUp form .form-action .forgot-password:hover a {
+  color: #fff;
 }
 #modalSignInUp .panels-container {
     position: absolute;
@@ -261,7 +305,7 @@
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
-    background-image: linear-gradient(0deg, rgba(255,161,9,0.1) 5%, rgba(255,161,9,0.5) 10%, rgba(255,161,9,1) 100%);
+    background-image: linear-gradient(0deg, rgba(255,161,9,1) 20%, rgba(255,161,9,0.5) 40%, rgba(255,161,9,0.1) 100%);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: 6;
@@ -309,24 +353,28 @@
     margin: 20px 0;
 }
 #modalSignInUp .panel p span {
-  color: #FFa109;
+  color: #6fa6d4;
   font-size: 16px;
   
 } 
 #modalSignInUp .btn.transparent {
-    margin: 0;
-    background: none;
-    border: 2px solid #fff;
-    width: 130px;
-    height: 41px;
-    font-weight: 600;
-    font-size: 0.8rem;
-  }
-  
-  #modalSignInUp .right-panel .image,
-  #modalSignInUp .right-panel .content {
-    transform: translateX(800px);
-  }
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #6fa6d4;
+}
+#modalSignInUp .btn.transparent:hover {
+  background: #6fa6d4;
+  color: #fff;
+}
+#modalSignInUp .right-panel .image,
+#modalSignInUp .right-panel .content {
+  transform: translateX(800px);
+}
   
   /* ANIMATION */
   
@@ -355,6 +403,71 @@
     z-index: 1;
   }
   
+  #modalSignInUp .form-group.success input {
+  border-color: #6fa6d4;
+}
+#modalSignInUp .form-group.success #error-massage {
+  display: none;
+}
+#modalSignInUp .form-group.error input {
+  border-color: #ff3860;
+}
+#modalSignInUp .form-group.error #error-massage {
+  display: block;
+}
+#modalSignInUp #error-massage {
+    color: #ff3860;
+    font-size: 10px;
+    margin: 5px 0 0 10px;
+    position: absolute;
+    top: 100%;
+}
+.signup-success {
+  display: none;
+  max-width: 90%;
+}
+.signup-success.show-success {
+  display: flex;
+  animation: zoom-in 2s ease;
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+.signup-success img {
+  max-width: 100%;
+  height: auto;
+
+}
+.signup-success h1 {
+  color: #FFa109;
+  margin-bottom: 20px;
+}
+.signup-success p {
+  color: #6fa6d4;
+  font-size: 18px;
+}
+.signup-form-container {
+  display: flex;
+}
+@keyframes zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  1000% {
+    transform: scale(0,0);
+  }
+}
+.signup-form-container.hide-form {
+  display: none;
+  animation: zoom-out 2s ease;
+
+
+}
   #modalSignInUp  .wrapper.sign-up-mode .right-panel .image,
   #modalSignInUp .wrapper.sign-up-mode .right-panel .content {
     transform: translateX(0%);
@@ -424,12 +537,11 @@
   #modalSignInUp .panel p {
     font-size: 14px;
     padding: 0.5rem 0;
+    margin: 10px 0;
   }
   
   #modalSignInUp .btn.transparent {
-    width: 110px;
-    height: 35px;
-    font-size: 0.7rem;
+    font-size: 12px;
   }
 
   #modalSignInUp .wrapper:before {
@@ -445,7 +557,7 @@
 
   #modalSignInUp .wrapper.sign-up-mode:before {
     transform: translate(-50%, 100%);
-    bottom: 28%;
+    bottom: 32%;
     right: initial;
   }
 
@@ -498,4 +610,9 @@
     left: 50%;
   }
 }
-  
+
+@media only screen and (max-width: 475.89px) {
+  #formSignIn .form-action {
+    flex-direction: column;
+  }
+}

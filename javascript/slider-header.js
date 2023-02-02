@@ -1,6 +1,6 @@
 const productData = [
     {
-        title: 'Điểm nhấn cho phong cách',
+        title: 'Điểm nhấn phong cách',
         imageLeft: '/assets/images/slider-header/sm-img-1.jpeg',
         imageRight: '/assets/images/slider-header/img-1.jpeg',
         des: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'

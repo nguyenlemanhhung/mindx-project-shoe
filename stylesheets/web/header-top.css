@@ -232,7 +232,9 @@ header {
     align-items: center;
     position: relative;
 }
-
+.header-container .header-content .content .btn-action {
+    margin-top: 3rem;
+}
 .header-container .header-content .go-main-products {
     padding: 10px 20px;
     border-radius: 10px;
@@ -272,6 +274,7 @@ header {
     color: #c8d3e6;
     font-size: 55px;
     line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 .header-container .header-content .product-detail .product-des {
     color: #c8d3e6;
@@ -585,25 +588,25 @@ header {
 
 /* no user */
 
-.header-top .header-profile .no-user .btn-sign-in {
+.header-top .header-profile .no-user .sign-in-header {
     padding: 8px 15px;
     border: 1px solid #6fa6d4;
     border-radius: 20px;
     color: #f8f9fa;
     background: #6fa6d4;
 }
-.header-top .header-profile .no-user .btn-sign-in:hover {
+.header-top .header-profile .no-user .sign-in-header:hover {
     background-color: #fff;
     color: #6fa6d4;
 }
-.header-top .header-profile .no-user .btn-sign-up {
+.header-top .header-profile .no-user .sign-up-header {
     padding: 8px 15px;
     color: #fff;
     background-color: #FFa109;
     border-radius: 20px;
     border: none;
 }
-.header-top .header-profile .no-user .btn-sign-up:hover {
+.header-top .header-profile .no-user .sign-up-header:hover {
     color: #FFa109;
     border: 1px solid #FFa109;
     background-color: #fff;
@@ -756,8 +759,11 @@ header {
         width: 100%;
         height: 60%;
     }
-    .header-top .header-profile .no-user .btn-sign-in,
-    .header-top .header-profile .no-user .btn-sign-up {
+    .header-container .header-content .right-side .product-title {
+        font-size: 50px;
+    }
+    .header-top .header-profile .no-user .sign-in-header,
+    .header-top .header-profile .no-user .sign-up-header {
         padding: 5px 10px;
     }
 
