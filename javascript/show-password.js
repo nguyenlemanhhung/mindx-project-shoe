@@ -2,21 +2,21 @@
 $(".toggler-signin").click(function() {
 
     $(this).toggleClass("bi-eye-fill bi-eye-slash-fill");
-    var valuePwSignIn = document.getElementById('passwordSignIn');
-    if (valuePwSignIn.type == "password") {
-      valuePwSignIn.type = 'text';
+    let passwordSignInValue = document.getElementById('passwordSignIn');
+    if (passwordSignInValue.type == "password") {
+      passwordSignInValue.type = 'text';
     } else {
-        valuePwSignIn.type = 'password';
+        passwordSignInValue.type = 'password';
     }
   });
   
 $(".toggler-signup").click(function() {
     $(this).toggleClass("bi-eye-fill bi-eye-slash-fill");
-    var valuePwSignUp = document.getElementById('passwordSignUp');
+    let passwordSignUpValue = document.getElementById('passwordSignUp');
 
-    if (valuePwSignUp.type == "password") {
-        valuePwSignUp.type = 'text';
+    if (passwordSignUpValue.type == "password") {
+        passwordSignUpValue.type = 'text';
         } else {
-            valuePwSignUp.type = 'password';
+            passwordSignUpValue.type = 'password';
         }
 });

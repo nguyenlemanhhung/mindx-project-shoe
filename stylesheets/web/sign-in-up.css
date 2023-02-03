@@ -64,9 +64,10 @@
     font-size: 36px;
     color: #444;
     margin-bottom: 30px;
+    font-family: 'Rowdies', cursive;
 }
 #modalSignInUp .form-group {
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     position: relative;
 }
 #modalSignInUp .form-group.success {
@@ -108,6 +109,7 @@
     background: none;
     border: none;
 }
+
 #modalSignInUp .form-group button:focus {
     outline: none;
 }
@@ -235,22 +237,21 @@
 }
   
 #modalSignInUp form .btn {
-  padding: 15px 30px;
-  background-color: #5995fd;
-  border: none;
-  outline: none;
-  border-radius: 49px;
+  position: relative;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: #3498db;
+  color: #3498db;
+  transition: all 150ms ease-in-out;
+}
+
+
+#modalSignInUp form .btn:hover{
+  background-color: #3498db;
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.5s;
-  font-size: 14px ;
 }
-  
-#modalSignInUp form .btn:hover {
-    background-color: #4d84e2;
-}
+
 #modalSignInUp form .form-action .remember-login label{
   color: #6fa6d4;
   margin: 0;

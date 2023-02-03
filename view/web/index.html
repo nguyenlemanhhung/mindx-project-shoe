@@ -157,6 +157,7 @@
                                 <img src="/assets/images/avt/avt-1.jpeg" alt="">
                             </div>
                             <div class="user-setting">
+                                <p class="user-name-header"></p>
                                 <ul class="m-0">
                                     <li class="edit">
                                         <a class="edit-link" href="">
@@ -278,7 +279,7 @@
                                     <input type="password" class="form-control" id="passwordSignIn">
                                     <label for="passwordSignIn">Mật khẩu</label>  
                                     <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signin"></i></button>
+                                    <button type="button"><i class="bi bi-eye-slash-fill icon-right toggler-signin"></i></button>
                                     <div id="error-massage" class="error"></div>                           
 
                                 </div>
@@ -291,8 +292,8 @@
                                         <a href="#">Quên mật khẩu !</a>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
-
+                                <button id="btn-sign-in" type="submit" class="btn btn-primary">Đăng Nhập</button>
+                                
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
                                     <p>Hoặc</p>
@@ -342,7 +343,7 @@
                                         <input type="password" class="form-control" id="passwordSignUp" autocomplete="off">                                   
                                         <label for="passwordSignUp">Mật khẩu</label>  
                                         <i class="bi bi-lock-fill icon-left"></i>
-                                        <button><i class="bi bi-eye-slash-fill icon-right toggler-signup"></i></button>
+                                        <button type="button"><i class="bi bi-eye-slash-fill icon-right toggler-signup"></i></button>
                                         <div id="error-massage" class="error"></div>                           
                                     </div>
 
@@ -1797,8 +1798,8 @@
     <script src="/javascript/sign-form.js"></script>
     <script src="/javascript/slider-header.js"></script>
     <script src="/javascript/main-menu.js"></script>
-    <!-- <script src="/javascript/auth.js"></script> -->
     <script src="/javascript/show-password.js"></script>
     <script src="/javascript/validate-auth.js"></script>
+
 </body>
 </html>

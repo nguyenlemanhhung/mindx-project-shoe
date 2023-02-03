@@ -54,9 +54,10 @@
                                     <span>Sản phẩm</span>
                                 </a>
                                 <div class="submenu">
+                                    
                                     <ul class="submenu-items d-flex">
                                         <li class="submenu-item">
-                                            <a href="#" class="submenu-link font-weight-bold">
+                                            <a href="/view/web/all-product.html" class="submenu-link font-weight-bold">
                                                 <span>Giày nam</span>
                                             </a>
                                             <nav class="child-submenu">
@@ -81,7 +82,7 @@
                                         </li>
                                         <div class="vertical-line"></div>
                                         <li class="submenu-item">
-                                            <a href="#" class="submenu-link font-weight-bold">
+                                            <a href="/view/web/all-product.html" class="submenu-link font-weight-bold">
                                                 <span>Giày nữ</span>
                                             </a>
                                             <nav class="child-submenu">
@@ -142,10 +143,10 @@
                     
                     <div class="header-profile">
                         <div class="no-user" id="no-user">
-                            <button type="button" class="btn-sign-in" data-toggle="modal" data-target="#modalSignInUp">
+                            <button type="button" class="sign-in-header" data-toggle="modal" data-target="#modalSignInUp">
                                 Đăng nhập
                             </button>
-                            <button type="button" class="btn-sign-up" data-toggle="modal" data-target="#modalSignInUp">
+                            <button type="button" class="sign-up-header" data-toggle="modal" data-target="#modalSignInUp">
                                 Đăng ký
                             </button>
                         </div>
@@ -230,7 +231,7 @@
                     <div class="content">
                         <div class="product-detail mr-2">
                             <h1 class="product-title mb-5">Điểm nhấn phong cách</h1>
-                            <p class="product-des mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="product-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                             <div class="btn-action d-flex justify-content-between align-items-center">
                                 <button class="go-main-products">
                                     <a href="#main-product">Khám phá ngay</a>
@@ -261,23 +262,35 @@
                             <i class="bi bi-x"></i>
                         </button>
                         <div class="signin-signup">
-                            <form action="#" class="sign-in-form">
+                            <form id="formSignIn" action="" class="sign-in-form">
                                 <h2 class="title text-center">Chào mừng bạn <br> quay lại !</h2>
 
                                 <div class="form-group w-100">
-                                    <input type="email" class="form-control" id="emailSignIn" required>
+                                    <input type="text" class="form-control" id="emailSignIn">
                                     <label for="emailSignIn">Địa chỉ Email</label>
                                     <i class="bi bi-envelope-fill icon-left"></i>
+                                    <div id="error-massage" class="error"></div>                           
+
                                 </div>
 
                                 <div class="form-group w-100">                                  
-                                    <input type="password" class="form-control" id="passwordSignIn" required>
+                                    <input type="password" class="form-control" id="passwordSignIn">
                                     <label for="passwordSignIn">Mật khẩu</label>  
                                     <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signin"></i></button>                              
-                                </div>
+                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signin"></i></button>
+                                    <div id="error-massage" class="error"></div>                           
 
-                                <button type="submit" class="btn btn-primary" onclick="checkData()">Đăng Nhập</button>
+                                </div>
+                                <div class="form-action d-flex align-items-center justify-content-between w-100 mb-4">
+                                    <div class="remember-login">
+                                        <input type="checkbox" name="" id="check-remember">
+                                        <label for="check-remember">Ghi nhớ đăng nhập</label>
+                                    </div>
+                                    <div class="forgot-password">
+                                        <a href="#">Quên mật khẩu !</a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
 
                                 <div class="social-text d-flex justify-content-center align-items-center">
                                     <div class="dividing-line"></div>
@@ -308,58 +321,68 @@
                                 </div>
                             </form>
 
-                            <form action="#" class="sign-up-form">
-                                <h2 class="title text-center">Chào mừng <br> thành viên mới !</h2>
-
-                                <div class="form-group w-100">
-                                    <input type="email" class="form-control" id="emailSignUp" required>
-                                    <label for="emailSignUp">Địa chỉ Email</label>
-                                    <i class="bi bi-envelope-fill icon-left"></i>
+                            <form id="formSignUp" action="#" class="sign-up-form">
+                                <div class="signup-success justify-content-center align-items-center flex-column">
+                                    <img src="/assets/images/success.png" alt="">
+                                    <h1>Đăng ký thành công </h1>
+                                    <p><span>Đăng nhập</span> để tiếp tục mua sắm</p>
                                 </div>
+                                <div class="signup-form-container justify-content-center align-items-center flex-column w-100">
+                                    <h2 class="title text-center">Chào mừng <br> thành viên mới !</h2>
 
-                                <div class="form-group w-100">                                  
-                                    <input type="password" class="form-control" id="passwordSignUp" required>
-                                    <label for="passwordSignUp">Mật khẩu</label>  
-                                    <i class="bi bi-lock-fill icon-left"></i>
-                                    <button><i class="bi bi-eye-slash-fill icon-right toggler-signup"></i></button>                              
-                                </div>
-
-                                <div class="form-group w-100">                                  
-                                    <input type="password" class="form-control" id="confirmPasswordSignUp" required>
-                                    <label for="confirmPasswordSignUp">Xác nhận mật khẩu</label>  
-                                    <i class="bi bi-lock-fill icon-left"></i>
-                                    <!-- <button><i class="bi bi-eye-slash-fill icon-right"></i></button>                               -->
-                                </div>
-
-                                <button type="submit" class="btn btn-primary" onclick="addData()">Đăng ký</button>
-
-                                <div class="social-text d-flex justify-content-center align-items-center">
-                                    <div class="dividing-line"></div>
-                                    <p>Hoặc</p>
-                                    <div class="dividing-line"></div>
-                                    
-                                </div>
-                                <div class="social-media d-flex justify-content-center align-items-center">
-                                    <div class="social-media-item link-facebook">
-                                        <span class="sub-text">Facebook</span>
-                                        <a href="#" class="social-icon">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
+                                    <div class="form-group w-100">
+                                        <input type="text" class="form-control" id="emailSignUp" autocomplete="off">
+                                        <label for="emailSignUp">Email</label>
+                                        <i class="bi bi-envelope-fill icon-left"></i>
+                                        <div id="error-massage" class="error"></div>
                                     </div>
-                                    <div class="social-media-item link-google">
-                                        <span class="sub-text">Google</span>
-                                        <a href="#" class="social-icon">
-                                            <i class="bi bi-google"></i>
-                                        </a>
+
+                                    <div class="form-group w-100">                                  
+                                        <input type="password" class="form-control" id="passwordSignUp" autocomplete="off">                                   
+                                        <label for="passwordSignUp">Mật khẩu</label>  
+                                        <i class="bi bi-lock-fill icon-left"></i>
+                                        <button><i class="bi bi-eye-slash-fill icon-right toggler-signup"></i></button>
+                                        <div id="error-massage" class="error"></div>                           
                                     </div>
-                                    <div class="social-media-item link-apple">
-                                        <span class="sub-text">Apple</span>
-                                        <a href="#" class="social-icon">
-                                            <i class="bi bi-apple"></i>
-                                        </a>
-                                    </div> 
-                                    
+
+                                    <div class="form-group w-100">                                  
+                                        <input type="password" class="form-control" id="confirmPasswordSignUp" autocomplete="off"="">
+                                        <label for="confirmPasswordSignUp">Xác nhận mật khẩu</label>  
+                                        <i class="bi bi-lock-fill icon-left"></i>
+                                        <div id="error-massage" class="error"></div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+
+                                    <div class="social-text d-flex justify-content-center align-items-center">
+                                        <div class="dividing-line"></div>
+                                        <p>Hoặc</p>
+                                        <div class="dividing-line"></div>
+                                        
+                                    </div>
+                                    <div class="social-media d-flex justify-content-center align-items-center">
+                                        <div class="social-media-item link-facebook">
+                                            <span class="sub-text">Facebook</span>
+                                            <a href="#" class="social-icon">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="social-media-item link-google">
+                                            <span class="sub-text">Google</span>
+                                            <a href="#" class="social-icon">
+                                                <i class="bi bi-google"></i>
+                                            </a>
+                                        </div>
+                                        <div class="social-media-item link-apple">
+                                            <span class="sub-text">Apple</span>
+                                            <a href="#" class="social-icon">
+                                                <i class="bi bi-apple"></i>
+                                            </a>
+                                        </div> 
+                                        
+                                    </div>
                                 </div>
+                                
                             </form>
                         </div>
                         </div>
@@ -369,9 +392,9 @@
                                 <div class="content">
                                 <h3>Bạn chưa có tài khoản ?</h3>
                                 <p>
-                                    Đăng ký thành viên ngay để nhận <span>Voucher</span>, <span>Thông tin khuyến mãi</span> và <span>Thanh toán online</span> khi mua hàng!
+                                    <span>Đăng ký thành viên</span> ngay để nhận <span>Voucher</span>, <span>Thông tin khuyến mãi</span> và <span>Thanh toán online</span> khi mua hàng!
                                 </p>
-                                <button class="btn transparent" id="sign-up-btn">
+                                <button class="btn transparent" id="sign-up-switch">
                                     Đăng ký
                                 </button>
                                 </div>
@@ -381,9 +404,9 @@
                                 <div class="content">
                                 <h3>Bạn là thành viên ?</h3>
                                 <p>
-                                    Đăng nhập ngay để sử dụng <span>Voucher</span> và các <span>Ưu đãi</span> cho thành viên !
+                                    <span>Đăng nhập</span> ngay để sử dụng <span>Voucher</span> và các <span>Ưu đãi</span> cho thành viên !
                                 </p>
-                                <button class="btn transparent" id="sign-in-btn">
+                                <button class="btn transparent" id="sign-in-switch">
                                     Đăng nhập
                                 </button>
                                 </div>
@@ -414,7 +437,7 @@
                         </button>
                     </div>
                     <div class="bag-body">
-                        <h2 class="bag-title" id="bagTitle">Your <span>Shopping Bag</span></h2>
+                        <h2 class="bag-title" id="bagTitle"><span>Giỏ hàng </span>của bạn</h2>
                         <div class="bag-tab">
                             <table class="table table-striped">
                                 <thead>
@@ -570,7 +593,7 @@
                     <h5 class="product-class mb-3">// Men's Shoe</h5>
                     <h2 class="product-name mb-3">Red Nike Jordan Max Aura 3</h2>
                     <p class="product-status mb-3">Tình trạng : <span>Còn hàng</span></p>
-                    <h5 class="product-price mb-3">$ <span>150</span></h5>
+                    <h5 class="product-price mb-3"><span>760.000</span>đ</h5>
                     <div class="promotions mb-3">
                         <div class="promotions-title">
                             Mua càng nhiều, ưu đãi càng lớn
@@ -731,12 +754,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="/javascript/chaning-image.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="/javascript/btn-back-top.js"></script>
     <script src="/javascript/sign-form.js"></script>
     <script src="/javascript/slider-header.js"></script>
     <script src="/javascript/main-menu.js"></script>
-    <script src="/javascript/auth.js"></script>
     <script src="/javascript/show-password.js"></script>
+    <script src="/javascript/validate-auth.js"></script>
 </body>
 </html>
